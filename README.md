@@ -471,9 +471,8 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 
 ## 📬 Contact
 
-- **GitHub Issues**: [Report bugs or request features](https://github.com/yourusername/autonomousMOVIEMAKER/issues)
-- **Discussions**: [Join the conversation](https://github.com/yourusername/autonomousMOVIEMAKER/discussions)
-- **Twitter**: [@autonomousMovie](https://twitter.com/autonomousMovie)
+- **GitHub Issues**: [Report bugs or request features](https://github.com/vkumar-dev/autonomousMOVIEMAKER/issues)
+- **Discussions**: [Join the conversation](https://github.com/vkumar-dev/autonomousMOVIEMAKER/discussions)
 
 ---
 
