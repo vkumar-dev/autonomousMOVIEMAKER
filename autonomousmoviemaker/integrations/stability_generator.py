@@ -21,15 +21,17 @@ class StabilityGenerator(BaseImageGenerator):
     """
     Stability AI Stable Diffusion image generator.
     
+    Supports latest models: SD3, SDXL Turbo, SD 1.5
+    
     Usage:
         generator = StabilityGenerator(
-            model_name="stability-ai/sdxl",
+            model_name="stability-ai/sd3",
             api_key="your-api-key"
         )
         result = await generator.generate("A cyberpunk cityscape at night")
     """
     
-    def __init__(self, model_name: str = "stability-ai/sdxl", api_key: Optional[str] = None, **kwargs):
+    def __init__(self, model_name: str = "stability-ai/sd3", api_key: Optional[str] = None, **kwargs):
         super().__init__(model_name, api_key=api_key, **kwargs)
         self.api_key = api_key
         self._session = None

@@ -8,7 +8,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Code Style: Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-[Installation](#-installation) • [Quick Start](#-quick-start) • [Documentation](#-documentation) • [Examples](#-examples) • [Contributing](#-contributing)
+[Website](https://vkumar-dev.github.io/autonomousMOVIEMAKER/) • [Installation](#-installation) • [Quick Start](#-quick-start) • [Documentation](#-documentation) • [Examples](#-examples) • [Contributing](#-contributing)
 
 </div>
 
@@ -16,7 +16,7 @@
 
 ## 🌟 Overview
 
-**autonomousMOVIEMAKER** is the ultimate AI-powered movie generation framework that transforms text prompts into complete cinematic experiences. From story conception to final cut, automate your entire film production pipeline with state-of-the-art AI models.
+**autonomousMOVIEMAKER** is the ultimate AI-powered movie generation framework that transforms text prompts into complete cinematic experiences. From story conception to final cut, automate your entire film production pipeline with state-of-the-art AI models (2026).
 
 ### ✨ Key Features
 
@@ -48,7 +48,7 @@
 pip install autonomous-moviemaker
 
 # Or install from source
-git clone https://github.com/yourusername/autonomousMOVIEMAKER.git
+git clone https://github.com/vkumar-dev/autonomousMOVIEMAKER.git
 cd autonomousMOVIEMAKER
 pip install -e .
 ```
@@ -62,16 +62,16 @@ from autonomousmoviemaker import MovieMaker
 async def main():
     # Initialize with default (mock) generators
     maker = MovieMaker()
-    
+
     # Create a movie from a prompt
     result = await maker.create_movie(
         "A heartwarming tale of a robot who learns to love"
     )
-    
+
     # Review the trailer
     print(f"Title: {result['script'].title}")
     print(f"Trailer ready: {result['trailer']}")
-    
+
     # Approve and generate full movie
     if user_approves_trailer():
         movie = await maker.generate_full_movie(result['script'])
@@ -209,17 +209,17 @@ from autonomousmoviemaker import Config, MovieMaker
 
 config = Config(
     text_model={
-        "model_name": "anthropic/claude-3-opus",
-        "max_tokens": 8192,
+        "model_name": "anthropic/claude-opus-4.6",
+        "max_tokens": 16384,
         "temperature": 0.8
     },
     image_model={
-        "model_name": "stability-ai/sdxl",
+        "model_name": "stability-ai/sd3",
         "width": 1920,
         "height": 1080
     },
     video_model={
-        "model_name": "runway/gen2",
+        "model_name": "runway/gen3-alpha",
         "duration": 5,
         "fps": 24
     },
@@ -308,24 +308,28 @@ await maker.create_movie("Your prompt")
 
 | Provider | Models | Usage |
 |----------|--------|-------|
-| OpenAI | GPT-4, GPT-4-Turbo | `OpenAIGenerator` |
-| Anthropic | Claude 3 Opus/Sonnet/Haiku | `AnthropicGenerator` |
+| OpenAI | GPT-5.4, GPT-4.5 | `OpenAIGenerator` |
+| Anthropic | Claude Opus 4.6, Sonnet 4.5 | `AnthropicGenerator` |
+| Google | Gemini 3.1 Pro | Custom implementation |
 | Local | llama.cpp, Ollama | Custom implementation |
 
 ### Image Generation
 
 | Provider | Models | Usage |
 |----------|--------|-------|
-| Stability AI | SDXL, SD 1.5 | `StabilityGenerator` |
-| OpenAI | DALL-E 3 | `DALLEGenerator` |
+| Stability AI | SD3, SDXL Turbo | `StabilityGenerator` |
+| OpenAI | GPT Image 1 | `DALLEGenerator` |
+| Midjourney | v7, Niji 7 | Custom implementation |
 | Replicate | Various | Custom implementation |
 
 ### Video Generation
 
 | Provider | Models | Usage |
 |----------|--------|-------|
-| Runway ML | Gen-2 | `RunwayGenerator` |
-| Stability AI | Stable Video | `StableVideoGenerator` |
+| Runway ML | Gen-3 Alpha | `RunwayGenerator` |
+| Stability AI | Stable Video 3 | `StableVideoGenerator` |
+| Google | Veo 2 | Custom implementation |
+| Pika | Pika 2.0 | Custom implementation |
 | Hugging Face | Various | Custom implementation |
 
 ---
@@ -359,27 +363,36 @@ from autonomousmoviemaker.integrations import (
 )
 
 async def main():
-    # Initialize with real API generators
+    # Initialize with real API generators (2026 models)
     maker = MovieMaker(
-        text_generator=OpenAIGenerator(api_key=os.getenv("OPENAI_API_KEY")),
-        image_generator=StabilityGenerator(api_key=os.getenv("STABILITY_API_KEY")),
-        video_generator=RunwayGenerator(api_key=os.getenv("RUNWAY_API_KEY"))
+        text_generator=OpenAIGenerator(
+            model_name="openai/gpt-5.4",
+            api_key=os.getenv("OPENAI_API_KEY")
+        ),
+        image_generator=StabilityGenerator(
+            model_name="stability-ai/sd3",
+            api_key=os.getenv("STABILITY_API_KEY")
+        ),
+        video_generator=RunwayGenerator(
+            model_name="runway/gen3-alpha",
+            api_key=os.getenv("RUNWAY_API_KEY")
+        )
     )
-    
+
     # Set progress callback
     def on_progress(p):
         print(f"[{p.stage}] {p.message}")
-    
+
     maker.set_progress_callback(on_progress)
-    
+
     # Create movie
     result = await maker.create_movie(
         "An animated short about a lonely robot who finds a flower"
     )
-    
+
     # Review and approve
     display_trailer(result['trailer'])
-    
+
     if get_user_approval():
         movie = await maker.generate_full_movie(result['script'])
         save_movie(movie)

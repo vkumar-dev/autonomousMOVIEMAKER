@@ -21,15 +21,17 @@ class OpenAIGenerator(BaseTextGenerator):
     """
     OpenAI GPT text generator.
     
+    Supports latest models: GPT-5.4, GPT-4.5, GPT-4-Turbo
+    
     Usage:
         generator = OpenAIGenerator(
-            model_name="openai/gpt-4",
+            model_name="openai/gpt-5.4",
             api_key="your-api-key"
         )
         result = await generator.generate("Write a story about...")
     """
     
-    def __init__(self, model_name: str = "openai/gpt-4", api_key: Optional[str] = None, **kwargs):
+    def __init__(self, model_name: str = "openai/gpt-5.4", api_key: Optional[str] = None, **kwargs):
         super().__init__(model_name, api_key=api_key, **kwargs)
         self.api_key = api_key
         self._client = None
@@ -77,17 +79,19 @@ class OpenAIGenerator(BaseTextGenerator):
 
 class DALLEGenerator(BaseImageGenerator):
     """
-    DALL-E image generator.
+    OpenAI GPT Image generator.
+    
+    Supports latest models: GPT Image 1, DALL-E 3
     
     Usage:
         generator = DALLEGenerator(
-            model_name="openai/dall-e-3",
+            model_name="openai/gpt-image-1",
             api_key="your-api-key"
         )
         result = await generator.generate("A cyberpunk cityscape at night")
     """
     
-    def __init__(self, model_name: str = "openai/dall-e-3", api_key: Optional[str] = None, **kwargs):
+    def __init__(self, model_name: str = "openai/gpt-image-1", api_key: Optional[str] = None, **kwargs):
         super().__init__(model_name, api_key=api_key, **kwargs)
         self.api_key = api_key
         self._client = None

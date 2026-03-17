@@ -17,15 +17,17 @@ class AnthropicGenerator(BaseTextGenerator):
     """
     Anthropic Claude text generator.
     
+    Supports latest models: Claude Opus 4.6, Claude Sonnet 4.5, Claude Haiku 4.5
+    
     Usage:
         generator = AnthropicGenerator(
-            model_name="anthropic/claude-3-opus",
+            model_name="anthropic/claude-opus-4.6",
             api_key="your-api-key"
         )
         result = await generator.generate("Write a story about...")
     """
     
-    def __init__(self, model_name: str = "anthropic/claude-3-opus", api_key: Optional[str] = None, **kwargs):
+    def __init__(self, model_name: str = "anthropic/claude-opus-4.6", api_key: Optional[str] = None, **kwargs):
         super().__init__(model_name, api_key=api_key, **kwargs)
         self.api_key = api_key
         self._client = None

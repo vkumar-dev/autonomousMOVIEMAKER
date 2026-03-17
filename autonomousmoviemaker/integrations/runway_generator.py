@@ -17,11 +17,13 @@ from ..generators.base import (
 
 class RunwayGenerator(BaseVideoGenerator):
     """
-    Runway Gen-2 video generator.
+    Runway video generator.
+    
+    Supports latest models: Gen-3 Alpha, Gen-2
     
     Usage:
         generator = RunwayGenerator(
-            model_name="runway/gen2",
+            model_name="runway/gen3-alpha",
             api_key="your-api-key"
         )
         result = await generator.generate("A cyberpunk cityscape at night")
@@ -30,7 +32,7 @@ class RunwayGenerator(BaseVideoGenerator):
     Check https://docs.runwayml.com for latest API documentation.
     """
     
-    def __init__(self, model_name: str = "runway/gen2", api_key: Optional[str] = None, **kwargs):
+    def __init__(self, model_name: str = "runway/gen3-alpha", api_key: Optional[str] = None, **kwargs):
         super().__init__(model_name, api_key=api_key, **kwargs)
         self.api_key = api_key
         self._session = None
