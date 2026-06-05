@@ -10,11 +10,11 @@ on:
       model:
         description: 'Ollama model to use'
         required: true
-        default: 'llama3.2'
+        default: 'qwen2.5-coder:7b'
         type: choice
         options:
+          - qwen2.5-coder:7b
           - llama3.2
-          - qwen2.5:3b
           - mistral
           - gemma2:2b
 
