@@ -22,18 +22,16 @@ def update_gallery():
                     data = json.load(f)
                     
                 # Look for mp4 files in the output directory
-                # Note: final_movie_path is currently output/title_full.mp4
-                # But maker.save_project saves to output/slug/
-                # Let's check both
                 video_file = None
                 potential_video = movie_path / f"{data['title'].lower().replace(' ', '_')}_full.mp4"
+                
                 if potential_video.exists():
-                    video_file = potential_video.relative_to(Path.cwd())
+                    video_file = f"output/{movie_path.name}/{potential_video.name}"
                 else:
                     # Look for any mp4 in the folder
                     mp4s = list(movie_path.glob("*.mp4"))
                     if mp4s:
-                        video_file = mp4s[0].relative_to(Path.cwd())
+                        video_file = f"output/{movie_path.name}/{mp4s[0].name}"
                 
                 movies.append({
                     "title": data.get("title", "Untitled"),
@@ -41,8 +39,8 @@ def update_gallery():
                     "genre": ", ".join(data.get("genre", [])),
                     "duration": f"{data.get('total_duration', 0) / 60:.1f}m",
                     "folder": movie_path.name,
-                    "video": str(video_file) if video_file else None,
-                    "path": str(movie_path.relative_to(Path.cwd()))
+                    "video": video_file,
+                    "path": f"output/{movie_path.name}"
                 })
 
     if not movies:
