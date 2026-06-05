@@ -78,18 +78,15 @@ jobs:
         run: |
           echo "📦 Installing Pi Coding Agent..."
           # In 2026, this is a standard tool for autonomous workflows
-          npm install -g @mariozechner/pi-coding-agent || echo "⚠️ Pi Agent install failed, continuing with python script"
+          sudo npm install -g @mariozechner/pi-coding-agent || echo "⚠️ Pi Agent install failed, continuing with python script"
 
       - name: Pull Ollama models
         env:
           MODEL_NAME: ${{ github.event.inputs.model || 'qwen2.5-coder:7b' }}
-          VIDEO_MODEL: 'wan-video:14b'
         run: |
           echo "📥 Pulling models..."
           # We pull the text model for orchestration/scripting
           ollama pull "$MODEL_NAME"
-          # We would also pull the video model if the runner had enough disk/GPU
-          # ollama pull "$VIDEO_MODEL"
           
           echo "📋 Available models:"
           ollama list
@@ -103,6 +100,14 @@ jobs:
           echo "🎬 Launching Movie Pipeline..."
           # The pipeline is now designed for 20-minute movies + 1.5-minute trailers
           python3 scripts/generate_movie.py
+          
+      - name: Debug Ollama on failure
+        if: failure()
+        run: |
+          echo "❌ Pipeline failed. Checking Ollama status..."
+          curl -s http://localhost:11434/api/tags || echo "Ollama service unreachable"
+          echo "Last 100 lines of Ollama log:"
+          tail -n 100 /tmp/ollama.log
 
       - name: Configure Git
         run: |

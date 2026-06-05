@@ -61,7 +61,7 @@ class OllamaTextGenerator(BaseTextGenerator):
             
         try:
             async with aiohttp.ClientSession() as session:
-                async with session.post(url, json=payload, timeout=kwargs.get("timeout", 300)) as response:
+                async with session.post(url, json=payload, timeout=kwargs.get("timeout", 600)) as response:
                     if response.status != 200:
                         error_text = await response.text()
                         return TextGenerationResult(
@@ -101,11 +101,19 @@ class OllamaTextGenerator(BaseTextGenerator):
                             "prompt_eval_count": data.get("prompt_eval_count", 0)
                         }
                     )
-        except Exception as e:
+        except asyncio.TimeoutError:
             return TextGenerationResult(
                 success=False,
-                error=f"Ollama connection error: {str(e)}",
+                error=f"Ollama timeout error (>{kwargs.get('timeout', 600)}s): The model is taking too long to respond.",
                 metadata={"model": self.actual_model}
+            )
+        except Exception as e:
+            import traceback
+            error_details = traceback.format_exc()
+            return TextGenerationResult(
+                success=False,
+                error=f"Ollama connection error: {type(e).__name__}: {str(e)}",
+                metadata={"model": self.actual_model, "traceback": error_details}
             )
             
     async def generate_batch(self, prompts: List[str], **kwargs) -> List[TextGenerationResult]:
