@@ -67,7 +67,7 @@ venv.bak/
 *~
 
 # Project specific
-output/
+# output/ (Keep output untracked by default, but allow manual/forced add)
 temp/
 tmp/
 *.mp4

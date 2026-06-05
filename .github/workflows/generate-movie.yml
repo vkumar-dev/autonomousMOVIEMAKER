@@ -116,7 +116,7 @@ jobs:
 
       - name: Commit and push generated movie files
         run: |
-          git add output/
+          git add -f output/
           
           if git diff --staged --quiet; then
             echo "ℹ️ No changes to commit"

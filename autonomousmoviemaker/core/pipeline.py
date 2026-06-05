@@ -132,24 +132,25 @@ Make it cinematic, emotionally engaging, and visually compelling."""
         self._update_progress("script", 0.2, "Story created, generating scenes...", "Creating scenes", 10, 2)
         
         # Generate scene breakdown
-        scenes_prompt = f"""Based on this movie concept, create a detailed scene-by-scene breakdown for a SHORT MOVIE (approx 20 minutes total).
+        scenes_prompt = f"""Based on this movie concept, create a detailed scene-by-scene breakdown for a SHORT MOVIE (EXACTLY 20 minutes total).
 
 Title: {story_data.get('title', 'Untitled')}
 Synopsis: {story_data.get('synopsis', '')}
 Characters: {story_data.get('characters', [])}
 
-Create 20-30 scenes that tell this story effectively. Each scene should be between 30 and 90 seconds long.
+IMPORTANT: You MUST create at least 25 scenes. Do not stop until you have a full 20-minute arc.
+Each scene should be between 30 and 60 seconds long.
 For each scene include:
 - Scene number
 - Location
-- Brief description of action (be visual!)
+- Brief description of action (be visual and cinematic!)
 - Scene type (establishing, action, dialogue, montage, climax, resolution)
 - Mood (happy, sad, tense, romantic, mysterious, epic, comedic, dramatic)
 - Characters present
 - Key dialogue (if any)
 - Estimated duration in seconds (aim for a total of 1200 seconds across all scenes)
 
-Output as JSON array of scenes."""
+Output as a VALID JSON array of scenes. Do not include any text outside the JSON array."""
 
         scenes_result = await self.text_generator.generate(scenes_prompt)
         
