@@ -97,6 +97,18 @@ async def concatenate_videos(video_paths: List[Path], output_path: Path) -> Path
             
         logger.info(f"Successfully concatenated {len(existing_paths)} clips into {output_path}")
         return output_path
+    finally:
+        # Clean up temporary files
+        if list_file_path.exists():
+            try:
+                list_file_path.unlink()
+            except Exception as e:
+                logger.warning(f"Failed to delete temp file {list_file_path}: {e}")
+        if temp_dir.exists():
+            try:
+                temp_dir.rmdir()
+            except Exception as e:
+                logger.warning(f"Failed to delete temp dir {temp_dir}: {e}")
         
 async def create_video_from_image(image_path: Path, output_path: Path, duration: float = 5.0, fps: int = 24) -> Path:
     """
