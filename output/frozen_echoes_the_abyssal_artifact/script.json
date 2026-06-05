@@ -1,0 +1,31 @@
+{
+  "title": "Frozen Echoes: The Abyssal Artifact",
+  "logline": "In a frozen underwater biosphere, a young scientist discovers a cosmic artifact that bends the laws of physics, unraveling mysteries of the universe.",
+  "synopsis": "In a remote, icy underwater city beneath the Earth's surface, Dr. Elara Myles is a brilliant but troubled marine biologist. Her latest project involves exploring a recently discovered coral reef. As she delves deeper into the crystal-clear waters using advanced scuba gear and an underwater drone, she stumbles upon a mysterious artifact hidden within the ancient ruins of an unknown civilization. The artifact appears to defy known laws of physics, causing the water around it to ripple and change color in impossible ways. Dr. Myles is initially skeptical but becomes obsessed with uncovering its secrets. As she spends more time with the artifact, strange phenomena begin to occur, affecting both her research and her sanity. She must navigate the treacherous underwater landscape and face the terrifying consequences of disturbing forces awakened by the cosmic relic.",
+  "genre": [
+    "Science Fiction",
+    "Drama"
+  ],
+  "characters": [
+    {
+      "name": "Dr. Elara Myles",
+      "description": "A brilliant marine biologist with a troubled past who becomes obsessed with uncovering the mysteries of an ancient cosmic artifact that defies physical laws, driving her to explore uncharted territories and make sacrifices in her quest for knowledge.",
+      "role": "protagonist"
+    }
+  ],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "location": "INT. SCENE - DAY",
+      "description": "Movie screenplay scene. Plot: In a remote, icy underwater city beneath the Earth's surface, Dr. Elara Myles is a brilliant but troubled marine biologist. Her latest project involves exploring a recently discovered coral reef. As she delves deeper into the crystal-clear waters using advanced scuba gear and an underwater drone, she stumbles upon a mysterious artifact hidden within the ancient ruins of an unknown civilization. The artifact appears to defy known laws of physics, causing the water around it to ripple and change color in impossible ways. Dr. Myles is initially skeptical but becomes obsessed with uncovering its secrets. As she spends more time with the artifact, strange phenomena begin to occur, affecting both her research and her sanity. She must navigate the treacherous underwater landscape and face the terrifying consequences of disturbing forces awakened by the cosmic relic.",
+      "scene_type": "action",
+      "mood": "dramatic",
+      "characters": [],
+      "dialogue": [],
+      "duration": 10.0,
+      "image_prompt": "Cinematic still of Movie screenplay scene. Plot: In a remote, icy underwater city beneath the Earth's surface, Dr. Elara Myles is a brilliant but troubled marine biologist. Her latest project involves exploring a recently discovered coral reef. As she delves deeper into the crystal-clear waters using advanced scuba gear and an underwater drone, she stumbles upon a mysterious artifact hidden within the ancient ruins of an unknown civilization. The artifact appears to defy known laws of physics, causing the water around it to ripple and change color in impossible ways. Dr. Myles is initially skeptical but becomes obsessed with uncovering its secrets. As she spends more time with the artifact, strange phenomena begin to occur, affecting both her research and her sanity. She must navigate the treacherous underwater landscape and face the terrifying consequences of disturbing forces awakened by the cosmic relic.",
+      "video_prompt": "Cinematic still of Movie screenplay scene. Plot: In a remote, icy underwater city beneath the Earth's surface, Dr. Elara Myles is a brilliant but troubled marine biologist. Her latest project involves exploring a recently discovered coral reef. As she delves deeper into the crystal-clear waters using advanced scuba gear and an underwater drone, she stumbles upon a mysterious artifact hidden within the ancient ruins of an unknown civilization. The artifact appears to defy known laws of physics, causing the water around it to ripple and change color in impossible ways. Dr. Myles is initially skeptical but becomes obsessed with uncovering its secrets. As she spends more time with the artifact, strange phenomena begin to occur, affecting both her research and her sanity. She must navigate the treacherous underwater landscape and face the terrifying consequences of disturbing forces awakened by the cosmic relic., cinematic camera movement, slow motion video"
+    }
+  ],
+  "total_duration": 10.0
+}
