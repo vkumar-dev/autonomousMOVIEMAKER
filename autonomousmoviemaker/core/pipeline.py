@@ -5,13 +5,17 @@ Orchestrates the full workflow from prompt to final movie.
 """
 
 import asyncio
+import json
+import logging
 from pathlib import Path
 from typing import Optional, Callable, Dict, Any, List
 from datetime import datetime
 
 from .config import Config
 from .models import Script, Scene, Trailer, Movie, GenerationProgress, Character, SceneType, Mood
-from .generators.base import BaseTextGenerator, BaseImageGenerator, BaseVideoGenerator, TextGenerationResult
+from ..generators.base import BaseTextGenerator, BaseImageGenerator, BaseVideoGenerator, TextGenerationResult
+
+logger = logging.getLogger(__name__)
 
 
 class MoviePipeline:
@@ -128,21 +132,22 @@ Make it cinematic, emotionally engaging, and visually compelling."""
         self._update_progress("script", 0.2, "Story created, generating scenes...", "Creating scenes", 10, 2)
         
         # Generate scene breakdown
-        scenes_prompt = f"""Based on this movie concept, create a detailed scene-by-scene breakdown:
+        scenes_prompt = f"""Based on this movie concept, create a detailed scene-by-scene breakdown for a SHORT MOVIE (approx 20 minutes total).
 
 Title: {story_data.get('title', 'Untitled')}
 Synopsis: {story_data.get('synopsis', '')}
 Characters: {story_data.get('characters', [])}
 
-Create 15-25 scenes that tell this story effectively. For each scene include:
+Create 20-30 scenes that tell this story effectively. Each scene should be between 30 and 90 seconds long.
+For each scene include:
 - Scene number
 - Location
-- Brief description of action
+- Brief description of action (be visual!)
 - Scene type (establishing, action, dialogue, montage, climax, resolution)
 - Mood (happy, sad, tense, romantic, mysterious, epic, comedic, dramatic)
 - Characters present
 - Key dialogue (if any)
-- Estimated duration in seconds
+- Estimated duration in seconds (aim for a total of 1200 seconds across all scenes)
 
 Output as JSON array of scenes."""
 
@@ -167,6 +172,106 @@ Output as JSON with scene_number and image_prompt fields."""
         
         self._update_progress("script", 0.8, "Finalizing script...", "Finalizing", 10, 8)
         
+        # Parse scenes
+        scenes_list = []
+        try:
+            raw_scenes = scenes_result.data if hasattr(scenes_result, 'data') and scenes_result.data else None
+            if not raw_scenes:
+                text_clean = scenes_result.text.strip()
+                if text_clean.startswith("```"):
+                    lines = text_clean.splitlines()
+                    if lines[0].startswith("```"):
+                        lines = lines[1:]
+                    if lines[-1].startswith("```"):
+                        lines = lines[:-1]
+                    text_clean = "\n".join(lines).strip()
+                raw_scenes = json.loads(text_clean)
+                
+            if not isinstance(raw_scenes, list):
+                if isinstance(raw_scenes, dict) and "scenes" in raw_scenes:
+                    raw_scenes = raw_scenes["scenes"]
+                else:
+                    raise ValueError("Scenes output is not a list")
+                    
+            for s in raw_scenes:
+                s_type_str = s.get("scene_type", "action").lower()
+                try:
+                    s_type = SceneType(s_type_str)
+                except ValueError:
+                    s_type = SceneType.ACTION
+                    
+                mood_str = s.get("mood", "dramatic").lower()
+                try:
+                    mood_val = Mood(mood_str)
+                except ValueError:
+                    mood_val = Mood.DRAMATIC
+                    
+                scene_obj = Scene(
+                    scene_number=int(s.get("scene_number", len(scenes_list) + 1)),
+                    location=s.get("location", "INT. SCENE - DAY"),
+                    description=s.get("description", ""),
+                    scene_type=s_type,
+                    mood=mood_val,
+                    characters=s.get("characters", []),
+                    dialogue=s.get("dialogue", []),
+                    duration=float(s.get("duration", 5.0)),
+                )
+                scenes_list.append(scene_obj)
+        except Exception as e:
+            logger.error(f"Failed to parse scenes JSON: {e}. Raw output: {scenes_result.text}")
+            scenes_list = [
+                Scene(
+                    scene_number=1,
+                    location="INT. SCENE - DAY",
+                    description=f"Movie screenplay scene. Plot: {story_data.get('synopsis', '')}",
+                    duration=10.0
+                )
+            ]
+
+        # Parse image prompts and attach to scenes
+        prompts_dict = {}
+        try:
+            raw_prompts = prompts_result.data if hasattr(prompts_result, 'data') and prompts_result.data else None
+            if not raw_prompts and prompts_result.success:
+                text_clean = prompts_result.text.strip()
+                if text_clean.startswith("```"):
+                    lines = text_clean.splitlines()
+                    if lines[0].startswith("```"):
+                        lines = lines[1:]
+                    if lines[-1].startswith("```"):
+                        lines = lines[:-1]
+                    text_clean = "\n".join(lines).strip()
+                raw_prompts = json.loads(text_clean)
+                
+            if isinstance(raw_prompts, list):
+                for p in raw_prompts:
+                    num = int(p.get("scene_number", 0))
+                    if num:
+                        prompts_dict[num] = p.get("image_prompt", "")
+            elif isinstance(raw_prompts, dict):
+                if "scenes" in raw_prompts and isinstance(raw_prompts["scenes"], list):
+                    for p in raw_prompts["scenes"]:
+                        num = int(p.get("scene_number", 0))
+                        if num:
+                            prompts_dict[num] = p.get("image_prompt", "")
+                else:
+                    for k, v in raw_prompts.items():
+                        try:
+                            num = int(k)
+                            if isinstance(v, str):
+                                prompts_dict[num] = v
+                            elif isinstance(v, dict):
+                                prompts_dict[num] = v.get("image_prompt", "")
+                        except ValueError:
+                            pass
+        except Exception as e:
+            logger.error(f"Failed to parse image prompts JSON: {e}. Raw output: {prompts_result.text}")
+
+        # Attach image/video prompts to scenes
+        for scene in scenes_list:
+            scene.image_prompt = prompts_dict.get(scene.scene_number, f"Cinematic still of {scene.description}")
+            scene.video_prompt = f"{scene.image_prompt}, cinematic camera movement, slow motion video"
+
         # Create Script object
         script = Script(
             title=story_data.get('title', 'Untitled'),
@@ -174,7 +279,7 @@ Output as JSON with scene_number and image_prompt fields."""
             synopsis=story_data.get('synopsis', ''),
             genre=story_data.get('genre', []),
             characters=[Character(**c) for c in story_data.get('characters', [])],
-            scenes=[],  # Will be populated from scenes_result
+            scenes=scenes_list,
         )
         
         self._update_progress("script", 1.0, "Script generation complete!")
@@ -231,7 +336,10 @@ Output as JSON with scene_number and image_prompt fields."""
         self._update_progress("trailer", 0.0, "Creating trailer...")
         
         # Select best scenes for trailer
-        trailer_scenes = script.get_trailer_scenes(self.config.pipeline.max_trailer_scenes)
+        trailer_scenes = script.get_trailer_scenes(
+            max_scenes=self.config.pipeline.max_trailer_scenes,
+            target_duration=self.config.pipeline.trailer_duration
+        )
         
         self._update_progress("trailer", 0.2, f"Selected {len(trailer_scenes)} scenes for trailer", "Generating trailer scenes", len(trailer_scenes), 0)
         

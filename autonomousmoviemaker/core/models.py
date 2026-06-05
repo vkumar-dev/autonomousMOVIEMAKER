@@ -91,8 +91,17 @@ class Script:
         if self.total_duration == 0.0 and self.scenes:
             self.total_duration = sum(scene.duration for scene in self.scenes)
     
-    def get_trailer_scenes(self, max_scenes: int = 10) -> List[Scene]:
-        """Select best scenes for trailer."""
+    def get_trailer_scenes(self, max_scenes: int = 15, target_duration: float = 90.0) -> List[Scene]:
+        """
+        Select best scenes for trailer aiming for a target duration.
+        
+        Args:
+            max_scenes: Maximum number of scenes to include.
+            target_duration: Target duration in seconds (default 90s/1.5m).
+            
+        Returns:
+            List of scenes selected for the trailer.
+        """
         # Prioritize action, climax, and establishing scenes
         priority_order = {
             SceneType.CLIMAX: 1,
@@ -103,7 +112,20 @@ class Script:
             SceneType.RESOLUTION: 6,
         }
         sorted_scenes = sorted(self.scenes, key=lambda s: priority_order.get(s.scene_type, 99))
-        return sorted_scenes[:max_scenes]
+        
+        trailer_scenes = []
+        current_duration = 0.0
+        
+        for scene in sorted_scenes:
+            if len(trailer_scenes) >= max_scenes:
+                break
+            if current_duration >= target_duration:
+                break
+            
+            trailer_scenes.append(scene)
+            current_duration += scene.duration
+            
+        return trailer_scenes
     
     def to_dict(self) -> Dict[str, Any]:
         """Convert script to dictionary."""

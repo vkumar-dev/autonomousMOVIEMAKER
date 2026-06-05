@@ -10,7 +10,7 @@ from datetime import datetime
 from .config import Config
 from .models import Script, Trailer, Movie, GenerationProgress
 from .pipeline import MoviePipeline
-from .generators.base import BaseTextGenerator, BaseImageGenerator, BaseVideoGenerator
+from ..generators.base import BaseTextGenerator, BaseImageGenerator, BaseVideoGenerator
 
 
 class MovieMaker:
@@ -117,23 +117,29 @@ class MovieMaker:
         # Lazy import to avoid dependency errors
         try:
             if "openai" in model_name or "gpt" in model_name:
-                from .integrations.openai_generator import OpenAIGenerator
+                from ..integrations.openai_generator import OpenAIGenerator
                 return OpenAIGenerator(
                     model_name=self.config.text_model.model_name,
                     api_key=self.config.text_model.api_key,
                 )
             elif "anthropic" in model_name or "claude" in model_name:
-                from .integrations.anthropic_generator import AnthropicGenerator
+                from ..integrations.anthropic_generator import AnthropicGenerator
                 return AnthropicGenerator(
                     model_name=self.config.text_model.model_name,
                     api_key=self.config.text_model.api_key,
                 )
+            elif "ollama" in model_name:
+                from ..integrations.ollama_generator import OllamaTextGenerator
+                return OllamaTextGenerator(
+                    model_name=self.config.text_model.model_name,
+                    api_base=self.config.text_model.api_base,
+                )
             else:
                 # Default to a mock generator for demonstration
-                from .integrations.mock_generator import MockTextGenerator
+                from ..integrations.mock_generator import MockTextGenerator
                 return MockTextGenerator(model_name=self.config.text_model.model_name)
         except ImportError:
-            from .integrations.mock_generator import MockTextGenerator
+            from ..integrations.mock_generator import MockTextGenerator
             return MockTextGenerator(model_name=self.config.text_model.model_name)
     
     def _create_image_generator(self) -> BaseImageGenerator:
@@ -142,28 +148,28 @@ class MovieMaker:
         
         try:
             if "stability" in model_name or "sdxl" in model_name or "stable" in model_name:
-                from .integrations.stability_generator import StabilityGenerator
+                from ..integrations.stability_generator import StabilityGenerator
                 return StabilityGenerator(
                     model_name=self.config.image_model.model_name,
                     api_key=self.config.image_model.api_key,
                 )
             elif "midjourney" in model_name:
-                from .integrations.midjourney_generator import MidjourneyGenerator
+                from ..integrations.midjourney_generator import MidjourneyGenerator
                 return MidjourneyGenerator(
                     model_name=self.config.image_model.model_name,
                     api_key=self.config.image_model.api_key,
                 )
             elif "dall-e" in model_name or "dalle" in model_name:
-                from .integrations.openai_generator import DALLEGenerator
+                from ..integrations.openai_generator import DALLEGenerator
                 return DALLEGenerator(
                     model_name=self.config.image_model.model_name,
                     api_key=self.config.image_model.api_key,
                 )
             else:
-                from .integrations.mock_generator import MockImageGenerator
+                from ..integrations.mock_generator import MockImageGenerator
                 return MockImageGenerator(model_name=self.config.image_model.model_name)
         except ImportError:
-            from .integrations.mock_generator import MockImageGenerator
+            from ..integrations.mock_generator import MockImageGenerator
             return MockImageGenerator(model_name=self.config.image_model.model_name)
     
     def _create_video_generator(self) -> BaseVideoGenerator:
@@ -172,28 +178,28 @@ class MovieMaker:
         
         try:
             if "runway" in model_name:
-                from .integrations.runway_generator import RunwayGenerator
+                from ..integrations.runway_generator import RunwayGenerator
                 return RunwayGenerator(
                     model_name=self.config.video_model.model_name,
                     api_key=self.config.video_model.api_key,
                 )
             elif "pika" in model_name:
-                from .integrations.pika_generator import PikaGenerator
+                from ..integrations.pika_generator import PikaGenerator
                 return PikaGenerator(
                     model_name=self.config.video_model.model_name,
                     api_key=self.config.video_model.api_key,
                 )
             elif "stability" in model_name or "stable" in model_name:
-                from .integrations.stability_generator import StableVideoGenerator
+                from ..integrations.stability_generator import StableVideoGenerator
                 return StableVideoGenerator(
                     model_name=self.config.video_model.model_name,
                     api_key=self.config.video_model.api_key,
                 )
             else:
-                from .integrations.mock_generator import MockVideoGenerator
+                from ..integrations.mock_generator import MockVideoGenerator
                 return MockVideoGenerator(model_name=self.config.video_model.model_name)
         except ImportError:
-            from .integrations.mock_generator import MockVideoGenerator
+            from ..integrations.mock_generator import MockVideoGenerator
             return MockVideoGenerator(model_name=self.config.video_model.model_name)
     
     def set_progress_callback(self, callback: Callable[[GenerationProgress], None]):

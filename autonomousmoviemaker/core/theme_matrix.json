@@ -1,0 +1,80 @@
+{
+  "genres": [
+    "Cyberpunk Thriller",
+    "Cosmic Horror",
+    "Neo-Noir Detective",
+    "Space Opera",
+    "Post-Apocalyptic Survival",
+    "Steampunk Adventure",
+    "Surreal Fantasy",
+    "Time-Travel Mystery",
+    "Psychological Drama",
+    "Techno-Thriller"
+  ],
+  "visual_styles": [
+    "Cinematic 70mm Film",
+    "Neon-Drenched Noir",
+    "Gritty Handheld Realism",
+    "Retro VHS Aesthetic",
+    "High-Contrast Monochrome",
+    "Technicolor Dreamlike",
+    "Stop-Motion Animation",
+    "Cyberpunk Synthwave",
+    "Sleek Futurist Minimalism",
+    "Gothic Expressionism"
+  ],
+  "moods": [
+    "Atmospheric & Eerie",
+    "Chaotic & High-Energy",
+    "Melancholic & Reflective",
+    "Suspenseful & Tense",
+    "Whimsical & Poetic",
+    "Epic & Grandiose",
+    "Dark & Cyber-dystopian",
+    "Warm & Nostalgic"
+  ],
+  "color_palettes": [
+    "Teal and Orange",
+    "Neon Purple and Cyan",
+    "Warm Sepia and Gold",
+    "Monochromatic High-Contrast",
+    "Muted Cold Blues and Greys",
+    "Acid Green and Charcoal",
+    "Pastel Sunsets",
+    "Vibrant Technicolor"
+  ],
+  "settings": [
+    "A rain-slicked futuristic metropolis",
+    "An abandoned research station in deep space",
+    "A forgotten library at the edge of the world",
+    "A sprawling desert wasteland dotted with scrap yards",
+    "An underwater biosphere beneath frozen ice",
+    "A retro 1980s arcade town in the middle of nowhere",
+    "A gothic Victorian city powered by steam",
+    "A virtual reality simulation that is slowly glitching"
+  ],
+  "themes": [
+    "The blurring boundary between human memory and artificial intelligence",
+    "A desperate search for a lost sibling across dimensions",
+    "The psychological toll of long-term isolation",
+    "A race against a decaying timeline",
+    "The discovery of a cosmic artifact that defies physical laws",
+    "Regret, second chances, and the illusion of time",
+    "Survival in a world being reclaimed by nature",
+    "The conspiracy behind a corporation that controls dreams"
+  ],
+  "camera_styles": [
+    "Slow tracking shots and wide establishing views",
+    "Shaky handheld camera and intense close-ups",
+    "Dolly zooms and Dutch angles to induce disorientation",
+    "Static, symmetrical compositions resembling art portraits",
+    "Dynamic drone aerials and fast-paced sweeps",
+    "Macro close-ups on details and textures"
+  ],
+  "pacing_types": [
+    "Slow-burn & Atmospheric",
+    "Fast-paced & Action-oriented",
+    "Poetic & Montage-heavy",
+    "Tense & Suspense-driven"
+  ]
+}

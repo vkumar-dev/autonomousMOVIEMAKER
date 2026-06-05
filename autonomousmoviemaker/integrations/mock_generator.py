@@ -27,13 +27,18 @@ class MockTextGenerator(BaseTextGenerator):
         """Generate mock text response."""
         await asyncio.sleep(0.5)  # Simulate API delay
         
-        # Simple mock response based on prompt type
+        import json
+        data = None
         if "scene" in prompt.lower() or "json array" in prompt.lower():
             text = """[
-    {"scene_number": 1, "location": "EXT. CITY STREET - NIGHT", "description": "Establishing shot of neon-lit cityscape", "scene_type": "establishing", "mood": "mysterious", "characters": [], "duration": 5},
-    {"scene_number": 2, "location": "INT. APARTMENT - NIGHT", "description": "Protagonist discovers mysterious device", "scene_type": "action", "mood": "tense", "characters": ["ALEX"], "duration": 8},
-    {"scene_number": 3, "location": "INT. LABORATORY - DAY", "description": "Climactic confrontation", "scene_type": "climax", "mood": "epic", "characters": ["ALEX", "DR. CHEN"], "duration": 12}
+    {"scene_number": 1, "location": "EXT. CITY STREET - NIGHT", "description": "Establishing shot of neon-lit cityscape", "scene_type": "establishing", "mood": "mysterious", "characters": [], "duration": 30},
+    {"scene_number": 2, "location": "INT. APARTMENT - NIGHT", "description": "Protagonist discovers mysterious device", "scene_type": "action", "mood": "tense", "characters": ["ALEX"], "duration": 60},
+    {"scene_number": 3, "location": "INT. LABORATORY - DAY", "description": "Climactic confrontation", "scene_type": "climax", "mood": "epic", "characters": ["ALEX", "DR. CHEN"], "duration": 120}
 ]"""
+            try:
+                data = json.loads(text)
+            except:
+                pass
         elif "character" in prompt.lower() or "story" in prompt.lower():
             text = """{
     "title": "The Memory Thief",
@@ -49,12 +54,18 @@ class MockTextGenerator(BaseTextGenerator):
         {"name": "Marcus Kane", "role": "antagonist", "description": "CEO of Mnemosyne Corp, will stop at nothing to protect his secrets"}
     ]
 }"""
+            try:
+                data = json.loads(text)
+            except:
+                pass
         else:
             text = "Generated content based on: " + prompt[:100] + "..."
+            data = text
         
         return TextGenerationResult(
             success=True,
             text=text,
+            data=data,
             tokens_used=len(text) // 4,
             metadata={"model": self.model_name}
         )

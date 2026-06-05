@@ -35,6 +35,11 @@ try:
 except ImportError:
     pass
 
+try:
+    from .ollama_generator import OllamaTextGenerator
+except ImportError:
+    pass
+
 # Image generators
 try:
     from .stability_generator import StabilityGenerator
@@ -54,6 +59,7 @@ __all__ = [
     # Text
     "OpenAIGenerator",
     "AnthropicGenerator",
+    "OllamaTextGenerator",
     "MockTextGenerator",
     # Image
     "DALLEGenerator",
