@@ -396,16 +396,33 @@ Output as JSON with scene_number and image_prompt fields."""
         self._update_progress("full_movie", 0.3, "Images complete, generating videos...", "Generating scene videos", len(scenes_with_images), 0)
         
         # Generate videos for all scenes
+        from ..utils.video import create_video_from_image, concatenate_videos
+        
         completed = 0
+        video_clips = []
         for scene in scenes_with_images:
-            video_prompt = scene.video_prompt or scene.image_prompt or scene.description
-            result = await self.video_generator.generate(
-                video_prompt,
-                duration=scene.duration or 5.0
-            )
+            video_clip_path = self.config.pipeline.temp_dir / f"scene_{scene.scene_number}.mp4"
             
-            if result.success:
-                scene.generated_video = result.video_path
+            # If we have a real video generator that isn't mock, use it
+            if self.video_generator and not self.video_generator.model_name.startswith("mock"):
+                video_prompt = scene.video_prompt or scene.image_prompt or scene.description
+                result = await self.video_generator.generate(
+                    video_prompt,
+                    duration=scene.duration or 5.0
+                )
+                if result.success:
+                    scene.generated_video = result.video_path
+                    video_clips.append(result.video_path)
+            
+            # Fallback: Create video from image (even if mock)
+            if not scene.generated_video and scene.generated_image:
+                await create_video_from_image(
+                    scene.generated_image,
+                    video_clip_path,
+                    duration=scene.duration or 5.0
+                )
+                scene.generated_video = video_clip_path
+                video_clips.append(video_clip_path)
             
             completed += 1
             self._update_progress(
@@ -419,11 +436,16 @@ Output as JSON with scene_number and image_prompt fields."""
         
         self._update_progress("full_movie", 0.9, "Compiling final movie...", "Finalizing movie")
         
+        final_movie_path = self.config.pipeline.output_dir / f"{script.title.lower().replace(' ', '_')}_full.mp4"
+        if video_clips:
+            await concatenate_videos(video_clips, final_movie_path)
+        
         # Create final movie object
         movie = Movie(
             title=script.title,
             script=script,
             duration=script.total_duration,
+            video_path=final_movie_path
         )
         
         self._update_progress("full_movie", 1.0, "Movie generation complete!")

@@ -91,6 +91,11 @@ jobs:
           echo "📋 Available models:"
           ollama list
 
+      - name: Install System Dependencies (ffmpeg)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+
       - name: Run Movie Generation Pipeline
         env:
           OLLAMA_MODEL: ${{ github.event.inputs.model || 'qwen2.5-coder:7b' }}
@@ -101,6 +106,11 @@ jobs:
           # The pipeline is now designed for 20-minute movies + 1.5-minute trailers
           python3 scripts/generate_movie.py
           
+      - name: Update Movie Gallery
+        run: |
+          echo "🖼️ Updating Catalog..."
+          python3 scripts/update_gallery.py
+
       - name: Debug Ollama on failure
         if: failure()
         run: |
@@ -117,13 +127,14 @@ jobs:
       - name: Commit and push generated movie files
         run: |
           git add -f output/
+          git add docs/index.html
           
           if git diff --staged --quiet; then
             echo "ℹ️ No changes to commit"
             exit 0
           fi
           
-          git commit -m "🤖 Auto-generated movie script: $(date -u +%Y-%m-%d)"
+          git commit -m "🤖 Auto-generated movie script & updated catalog: $(date -u +%Y-%m-%d)"
           
           if git push origin main; then
             echo "✅ Movie files committed and pushed"

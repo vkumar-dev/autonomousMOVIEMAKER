@@ -88,6 +88,13 @@ async def main():
         f.write("="*40 + "\n")
         f.write(f"Generated at: {datetime.now().isoformat()}\n")
 
+    # Move movie file to project dir
+    if movie.video_path and movie.video_path.exists():
+        final_mp4 = project_dir / f"{slug}_full.mp4"
+        import shutil
+        shutil.move(movie.video_path, final_mp4)
+        print(f"🎞️ Movie file moved to {final_mp4}")
+
     print(f"✅ Saved project files to {project_dir}")
     
     # Create a nice markdown screenplay presentation

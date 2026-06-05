@@ -98,15 +98,60 @@ async def concatenate_videos(video_paths: List[Path], output_path: Path) -> Path
         logger.info(f"Successfully concatenated {len(existing_paths)} clips into {output_path}")
         return output_path
         
-    finally:
-        # Clean up temporary files
-        if list_file_path.exists():
-            try:
-                list_file_path.unlink()
-            except Exception as e:
-                logger.warning(f"Failed to delete temp file {list_file_path}: {e}")
-        if temp_dir.exists():
-            try:
-                temp_dir.rmdir()
-            except Exception as e:
-                logger.warning(f"Failed to delete temp dir {temp_dir}: {e}")
+async def create_video_from_image(image_path: Path, output_path: Path, duration: float = 5.0, fps: int = 24) -> Path:
+    """
+    Create a video clip from a single image using ffmpeg.
+    Useful as a fallback or for animating stills.
+    """
+    if not image_path.exists():
+        raise FileNotFoundError(f"Image not found: {image_path}")
+
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    
+    # If mock, just copy
+    if image_path.suffix == ".txt":
+        output_path.write_text(f"MOCK VIDEO FROM IMAGE: {image_path.name}\nDuration: {duration}s")
+        return output_path
+
+    if not shutil.which("ffmpeg"):
+        raise RuntimeError("ffmpeg not found")
+
+    # Command to create a video from a single image with a slight zoom effect (Ken Burns)
+    # -loop 1: loop the input image
+    # -t: duration
+    # -vf: video filter for scale and zoom
+    cmd = [
+        "ffmpeg", "-y",
+        "-loop", "1",
+        "-i", str(image_path.absolute()),
+        "-vf", f"scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080,zoompan=z='min(zoom+0.001,1.5)':d={int(duration*fps)}:s=1920x1080",
+        "-c:v", "libx264",
+        "-t", str(duration),
+        "-pix_fmt", "yuv420p",
+        str(output_path.absolute())
+    ]
+
+    process = await asyncio.create_subprocess_exec(
+        *cmd,
+        stdout=asyncio.subprocess.PIPE,
+        stderr=asyncio.subprocess.PIPE
+    )
+    stdout, stderr = await process.communicate()
+
+    if process.returncode != 0:
+        logger.error(f"ffmpeg failed: {stderr.decode()}")
+        # Fallback to simple static video if zoompan fails
+        cmd_simple = [
+            "ffmpeg", "-y",
+            "-loop", "1",
+            "-i", str(image_path.absolute()),
+            "-c:v", "libx264",
+            "-t", str(duration),
+            "-pix_fmt", "yuv420p",
+            "-vf", "scale=1920:1080:force_original_aspect_ratio=decrease,pad=1920:1080:(ow-iw)/2:(oh-ih)/2",
+            str(output_path.absolute())
+        ]
+        process = await asyncio.create_subprocess_exec(*cmd_simple)
+        await process.communicate()
+
+    return output_path
