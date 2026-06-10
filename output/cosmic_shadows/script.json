@@ -1,0 +1,46 @@
+{
+  "title": "Cosmic Shadows",
+  "logline": "In a neon-drenched metropolis rife with rain and mystery, a brilliant scientist discovers an artifact that challenges the very fabric of reality, setting off a chaotic race to unlock its secrets.",
+  "synopsis": "In a sprawling, rain-soaked futuristic cityscape, Dr. Elara Myles, a brilliant but reclusive physicist, stumbles upon an ancient, cosmic artifact hidden within an abandoned skyscraper. As she deciphers the strange symbols on its surface, she realizes it defies all known physical laws and could potentially alter the course of time itself. The discovery ignites a frenzy among various factions vying for control of the artifact. Meanwhile, Elara finds herself caught in a dangerous game of cat and mouse, pursued by both corrupt government agents and rival scientists who wish to harness its power for their own ends. Amidst the chaos and high-stakes intrigue, Elara must navigate the complex web of politics and technology to uncover the true nature of the cosmic artifact before it falls into the wrong hands.",
+  "genre": [
+    "Science Fiction",
+    "Action"
+  ],
+  "characters": [
+    {
+      "name": "Dr. Elara Myles",
+      "description": "A brilliant but reclusive physicist with a passion for unlocking the secrets of the universe. She is haunted by her past and driven to uncover the true nature of the cosmic artifact, believing it could change the world for the better.",
+      "role": "Protagonist"
+    },
+    {
+      "name": "Agent Marcus Kane",
+      "description": "A ruthless government agent sent to retrieve the cosmic artifact before Elara can. He is driven by a desire for power and control over the artifact's potential, willing to do anything to achieve his goals.",
+      "role": "Antagonist"
+    },
+    {
+      "name": "Professor Hiroshi Tanaka",
+      "description": "Elara's mentor and former lover, who remains loyal to her despite their falling out. He helps Elara decipher the artifact's symbols but also becomes a target of the corrupt government.",
+      "role": "Supporting"
+    },
+    {
+      "name": "Dr. Elena Rodriguez",
+      "description": "A rival scientist competing for control of the cosmic artifact. She is driven by ambition and willing to go to any lengths to win, even if it means betraying her own colleagues.",
+      "role": "Supporting"
+    }
+  ],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "location": "INT. SCENE - DAY",
+      "description": "Movie screenplay scene. Plot: In a sprawling, rain-soaked futuristic cityscape, Dr. Elara Myles, a brilliant but reclusive physicist, stumbles upon an ancient, cosmic artifact hidden within an abandoned skyscraper. As she deciphers the strange symbols on its surface, she realizes it defies all known physical laws and could potentially alter the course of time itself. The discovery ignites a frenzy among various factions vying for control of the artifact. Meanwhile, Elara finds herself caught in a dangerous game of cat and mouse, pursued by both corrupt government agents and rival scientists who wish to harness its power for their own ends. Amidst the chaos and high-stakes intrigue, Elara must navigate the complex web of politics and technology to uncover the true nature of the cosmic artifact before it falls into the wrong hands.",
+      "scene_type": "action",
+      "mood": "dramatic",
+      "characters": [],
+      "dialogue": [],
+      "duration": 10.0,
+      "image_prompt": "Cinematic still of Movie screenplay scene. Plot: In a sprawling, rain-soaked futuristic cityscape, Dr. Elara Myles, a brilliant but reclusive physicist, stumbles upon an ancient, cosmic artifact hidden within an abandoned skyscraper. As she deciphers the strange symbols on its surface, she realizes it defies all known physical laws and could potentially alter the course of time itself. The discovery ignites a frenzy among various factions vying for control of the artifact. Meanwhile, Elara finds herself caught in a dangerous game of cat and mouse, pursued by both corrupt government agents and rival scientists who wish to harness its power for their own ends. Amidst the chaos and high-stakes intrigue, Elara must navigate the complex web of politics and technology to uncover the true nature of the cosmic artifact before it falls into the wrong hands.",
+      "video_prompt": "Cinematic still of Movie screenplay scene. Plot: In a sprawling, rain-soaked futuristic cityscape, Dr. Elara Myles, a brilliant but reclusive physicist, stumbles upon an ancient, cosmic artifact hidden within an abandoned skyscraper. As she deciphers the strange symbols on its surface, she realizes it defies all known physical laws and could potentially alter the course of time itself. The discovery ignites a frenzy among various factions vying for control of the artifact. Meanwhile, Elara finds herself caught in a dangerous game of cat and mouse, pursued by both corrupt government agents and rival scientists who wish to harness its power for their own ends. Amidst the chaos and high-stakes intrigue, Elara must navigate the complex web of politics and technology to uncover the true nature of the cosmic artifact before it falls into the wrong hands., cinematic camera movement, slow motion video"
+    }
+  ],
+  "total_duration": 10.0
+}

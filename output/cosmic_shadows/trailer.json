@@ -1,0 +1,21 @@
+{
+  "title": "Cosmic Shadows - Trailer",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "location": "INT. SCENE - DAY",
+      "description": "Movie screenplay scene. Plot: In a sprawling, rain-soaked futuristic cityscape, Dr. Elara Myles, a brilliant but reclusive physicist, stumbles upon an ancient, cosmic artifact hidden within an abandoned skyscraper. As she deciphers the strange symbols on its surface, she realizes it defies all known physical laws and could potentially alter the course of time itself. The discovery ignites a frenzy among various factions vying for control of the artifact. Meanwhile, Elara finds herself caught in a dangerous game of cat and mouse, pursued by both corrupt government agents and rival scientists who wish to harness its power for their own ends. Amidst the chaos and high-stakes intrigue, Elara must navigate the complex web of politics and technology to uncover the true nature of the cosmic artifact before it falls into the wrong hands.",
+      "scene_type": "action",
+      "mood": "dramatic",
+      "characters": [],
+      "dialogue": [],
+      "duration": 10.0,
+      "image_prompt": "Cinematic still of Movie screenplay scene. Plot: In a sprawling, rain-soaked futuristic cityscape, Dr. Elara Myles, a brilliant but reclusive physicist, stumbles upon an ancient, cosmic artifact hidden within an abandoned skyscraper. As she deciphers the strange symbols on its surface, she realizes it defies all known physical laws and could potentially alter the course of time itself. The discovery ignites a frenzy among various factions vying for control of the artifact. Meanwhile, Elara finds herself caught in a dangerous game of cat and mouse, pursued by both corrupt government agents and rival scientists who wish to harness its power for their own ends. Amidst the chaos and high-stakes intrigue, Elara must navigate the complex web of politics and technology to uncover the true nature of the cosmic artifact before it falls into the wrong hands.",
+      "video_prompt": "Cinematic still of Movie screenplay scene. Plot: In a sprawling, rain-soaked futuristic cityscape, Dr. Elara Myles, a brilliant but reclusive physicist, stumbles upon an ancient, cosmic artifact hidden within an abandoned skyscraper. As she deciphers the strange symbols on its surface, she realizes it defies all known physical laws and could potentially alter the course of time itself. The discovery ignites a frenzy among various factions vying for control of the artifact. Meanwhile, Elara finds herself caught in a dangerous game of cat and mouse, pursued by both corrupt government agents and rival scientists who wish to harness its power for their own ends. Amidst the chaos and high-stakes intrigue, Elara must navigate the complex web of politics and technology to uncover the true nature of the cosmic artifact before it falls into the wrong hands., cinematic camera movement, slow motion video"
+    }
+  ],
+  "duration": 3,
+  "music_style": "",
+  "voiceover_script": "",
+  "created_at": "2026-06-10T03:51:55.906884"
+}
