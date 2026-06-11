@@ -1,0 +1,269 @@
+{
+  "title": "Shadows in the Void",
+  "logline": "In a desolate desert wasteland controlled by a shadowy corporation that manipulates dreams, one survivor must unravel the dark conspiracy before it consumes them.",
+  "synopsis": "In the scorched sands of an alien desert wasteland, scattered among ruins of old civilizations, a lone figure named Aria wakes up in a state of perpetual night. Surrounded by scrap yards and the eerie glow of neon advertisements, she discovers that her reality is being manipulated by a clandestine corporation known as DreamForge, which holds the power to control people's dreams. As Aria uncovers the sinister plot behind the corporation's influence, she becomes the target of their wrath. With limited resources and increasing paranoia, Aria must race against time to find a way out before the corporation\u2019s grasp consumes her entirely.",
+  "genre": [
+    "Science Fiction",
+    "Drama"
+  ],
+  "characters": [
+    {
+      "name": "Aria",
+      "description": "Aria is a rugged survivor with a sharp mind and unwavering determination. Haunted by visions of a nightmare world, she becomes determined to uncover the truth behind her bizarre reality and escape the clutches of DreamForge.",
+      "role": "Protagonist"
+    },
+    {
+      "name": "Eliot",
+      "description": "A mysterious figure who appears early on in Aria's journey. Eliot seems to possess knowledge about the corporation and its operations, providing guidance and a sense of hope during Aria's darkest moments.",
+      "role": "Supporting Character"
+    },
+    {
+      "name": "Voss",
+      "description": "The head of DreamForge, Voss is a cold and calculating figure who sees Aria as an obstacle to his plans. Known for his ruthless methods and unwavering commitment to the corporation's goals, he will stop at nothing to maintain control.",
+      "role": "Antagonist"
+    }
+  ],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "location": "Desolate alien desert wasteland",
+      "description": "",
+      "scene_type": "establishing",
+      "mood": "tense",
+      "characters": [],
+      "dialogue": [],
+      "duration": 60.0,
+      "image_prompt": "Cinematic still of ",
+      "video_prompt": "Cinematic still of , cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 2,
+      "location": "Desolate alien desert wasteland",
+      "description": "",
+      "scene_type": "action",
+      "mood": "dramatic",
+      "characters": [],
+      "dialogue": [],
+      "duration": 60.0,
+      "image_prompt": "Cinematic still of ",
+      "video_prompt": "Cinematic still of , cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 3,
+      "location": "Desolate alien desert wasteland",
+      "description": "",
+      "scene_type": "dialogue",
+      "mood": "mysterious",
+      "characters": [],
+      "dialogue": [],
+      "duration": 60.0,
+      "image_prompt": "Cinematic still of ",
+      "video_prompt": "Cinematic still of , cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 4,
+      "location": "Desolate alien desert wasteland",
+      "description": "",
+      "scene_type": "dialogue",
+      "mood": "dramatic",
+      "characters": [],
+      "dialogue": [],
+      "duration": 60.0,
+      "image_prompt": "Cinematic still of ",
+      "video_prompt": "Cinematic still of , cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 5,
+      "location": "Desolate alien desert wasteland",
+      "description": "",
+      "scene_type": "action",
+      "mood": "tense",
+      "characters": [],
+      "dialogue": [],
+      "duration": 60.0,
+      "image_prompt": "Cinematic still of ",
+      "video_prompt": "Cinematic still of , cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 6,
+      "location": "Desolate alien desert wasteland",
+      "description": "",
+      "scene_type": "climax",
+      "mood": "dramatic",
+      "characters": [],
+      "dialogue": [],
+      "duration": 60.0,
+      "image_prompt": "Cinematic still of ",
+      "video_prompt": "Cinematic still of , cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 7,
+      "location": "Desolate alien desert wasteland",
+      "description": "",
+      "scene_type": "action",
+      "mood": "dramatic",
+      "characters": [],
+      "dialogue": [],
+      "duration": 60.0,
+      "image_prompt": "Cinematic still of ",
+      "video_prompt": "Cinematic still of , cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 8,
+      "location": "Desolate alien desert wasteland",
+      "description": "",
+      "scene_type": "establishing",
+      "mood": "epic",
+      "characters": [],
+      "dialogue": [],
+      "duration": 60.0,
+      "image_prompt": "Cinematic still of ",
+      "video_prompt": "Cinematic still of , cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 9,
+      "location": "Underground city of DreamForge",
+      "description": "",
+      "scene_type": "action",
+      "mood": "tense",
+      "characters": [],
+      "dialogue": [],
+      "duration": 60.0,
+      "image_prompt": "Cinematic still of ",
+      "video_prompt": "Cinematic still of , cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 10,
+      "location": "Underground city of DreamForge",
+      "description": "",
+      "scene_type": "dialogue",
+      "mood": "dramatic",
+      "characters": [],
+      "dialogue": [],
+      "duration": 60.0,
+      "image_prompt": "Cinematic still of ",
+      "video_prompt": "Cinematic still of , cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 11,
+      "location": "Underground city of DreamForge",
+      "description": "",
+      "scene_type": "climax",
+      "mood": "tense",
+      "characters": [],
+      "dialogue": [],
+      "duration": 60.0,
+      "image_prompt": "Cinematic still of ",
+      "video_prompt": "Cinematic still of , cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 12,
+      "location": "Underground city of DreamForge",
+      "description": "",
+      "scene_type": "action",
+      "mood": "dramatic",
+      "characters": [],
+      "dialogue": [],
+      "duration": 60.0,
+      "image_prompt": "Cinematic still of ",
+      "video_prompt": "Cinematic still of , cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 13,
+      "location": "Desolate alien desert wasteland",
+      "description": "",
+      "scene_type": "establishing",
+      "mood": "epic",
+      "characters": [],
+      "dialogue": [],
+      "duration": 60.0,
+      "image_prompt": "Cinematic still of ",
+      "video_prompt": "Cinematic still of , cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 14,
+      "location": "Desolate alien desert wasteland",
+      "description": "",
+      "scene_type": "climax",
+      "mood": "dramatic",
+      "characters": [],
+      "dialogue": [],
+      "duration": 60.0,
+      "image_prompt": "Cinematic still of ",
+      "video_prompt": "Cinematic still of , cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 15,
+      "location": "Desolate alien desert wasteland",
+      "description": "",
+      "scene_type": "action",
+      "mood": "dramatic",
+      "characters": [],
+      "dialogue": [],
+      "duration": 60.0,
+      "image_prompt": "Cinematic still of ",
+      "video_prompt": "Cinematic still of , cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 16,
+      "location": "Desolate alien desert wasteland",
+      "description": "",
+      "scene_type": "establishing",
+      "mood": "epic",
+      "characters": [],
+      "dialogue": [],
+      "duration": 60.0,
+      "image_prompt": "Cinematic still of ",
+      "video_prompt": "Cinematic still of , cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 17,
+      "location": "Portal to another world",
+      "description": "",
+      "scene_type": "resolution",
+      "mood": "happy",
+      "characters": [],
+      "dialogue": [],
+      "duration": 60.0,
+      "image_prompt": "Cinematic still of ",
+      "video_prompt": "Cinematic still of , cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 18,
+      "location": "Portal to another world",
+      "description": "",
+      "scene_type": "establishing",
+      "mood": "epic",
+      "characters": [],
+      "dialogue": [],
+      "duration": 60.0,
+      "image_prompt": "Cinematic still of ",
+      "video_prompt": "Cinematic still of , cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 19,
+      "location": "Portal to another world",
+      "description": "",
+      "scene_type": "dialogue",
+      "mood": "dramatic",
+      "characters": [],
+      "dialogue": [],
+      "duration": 60.0,
+      "image_prompt": "Cinematic still of ",
+      "video_prompt": "Cinematic still of , cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 20,
+      "location": "Portal to another world",
+      "description": "",
+      "scene_type": "resolution",
+      "mood": "epic",
+      "characters": [],
+      "dialogue": [],
+      "duration": 60.0,
+      "image_prompt": "Cinematic still of ",
+      "video_prompt": "Cinematic still of , cinematic camera movement, slow motion video"
+    }
+  ],
+  "total_duration": 1200.0
+}
