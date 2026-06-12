@@ -1,0 +1,41 @@
+{
+  "title": "Neon Abyss",
+  "logline": "In a glitchy virtual reality simulation, a detective unravels the psychological scars of long-term isolation, blurring the lines between reality and digital decay.",
+  "synopsis": "Detective Elara Voss navigates a neon-lit, glitch-ridden virtual world where her latest case involves unearthing the truth about a mysterious corporation. As she delves deeper into the simulation's secrets, she begins to question the nature of her own sanity and the true cost of technological immersion. The film follows Elara as she faces increasingly disturbing revelations that challenge her perception of reality, culminating in a climactic confrontation that forces her to confront the dark side of virtual existence.",
+  "genre": [
+    "Neo-Noir",
+    "Psychological Thriller"
+  ],
+  "characters": [
+    {
+      "name": "Elara Voss",
+      "description": "A seasoned detective known for her ability to unravel complex cases, Elara finds herself struggling with the psychological toll of long-term immersion in virtual reality. As she delves deeper into a case involving a mysterious corporation, she begins to question the nature of her own reality and the true cost of digital existence.",
+      "role": "Protagonist"
+    },
+    {
+      "name": "Jasper Blackwood",
+      "description": "The enigmatic owner of the corporation behind Elara's case, Jasper is a master of manipulation and virtual reality technology. He becomes obsessed with controlling Elara, using advanced psychological techniques to manipulate her perceptions and drive her to uncover the truth at any cost.",
+      "role": "Antagonist"
+    },
+    {
+      "name": "Dr. Mira Chen",
+      "description": "A psychologist specializing in digital addiction and its effects on mental health, Dr. Chen becomes Elara's confidant and helps her begin to understand the psychological toll of her long-term virtual reality immersion.",
+      "role": "Supporting Character"
+    }
+  ],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "location": "INT. SCENE - DAY",
+      "description": "Movie screenplay scene. Plot: Detective Elara Voss navigates a neon-lit, glitch-ridden virtual world where her latest case involves unearthing the truth about a mysterious corporation. As she delves deeper into the simulation's secrets, she begins to question the nature of her own sanity and the true cost of technological immersion. The film follows Elara as she faces increasingly disturbing revelations that challenge her perception of reality, culminating in a climactic confrontation that forces her to confront the dark side of virtual existence.",
+      "scene_type": "action",
+      "mood": "dramatic",
+      "characters": [],
+      "dialogue": [],
+      "duration": 10.0,
+      "image_prompt": "Cinematic still of Movie screenplay scene. Plot: Detective Elara Voss navigates a neon-lit, glitch-ridden virtual world where her latest case involves unearthing the truth about a mysterious corporation. As she delves deeper into the simulation's secrets, she begins to question the nature of her own sanity and the true cost of technological immersion. The film follows Elara as she faces increasingly disturbing revelations that challenge her perception of reality, culminating in a climactic confrontation that forces her to confront the dark side of virtual existence.",
+      "video_prompt": "Cinematic still of Movie screenplay scene. Plot: Detective Elara Voss navigates a neon-lit, glitch-ridden virtual world where her latest case involves unearthing the truth about a mysterious corporation. As she delves deeper into the simulation's secrets, she begins to question the nature of her own sanity and the true cost of technological immersion. The film follows Elara as she faces increasingly disturbing revelations that challenge her perception of reality, culminating in a climactic confrontation that forces her to confront the dark side of virtual existence., cinematic camera movement, slow motion video"
+    }
+  ],
+  "total_duration": 10.0
+}

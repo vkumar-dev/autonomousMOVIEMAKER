@@ -1,0 +1,21 @@
+{
+  "title": "Neon Abyss - Trailer",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "location": "INT. SCENE - DAY",
+      "description": "Movie screenplay scene. Plot: Detective Elara Voss navigates a neon-lit, glitch-ridden virtual world where her latest case involves unearthing the truth about a mysterious corporation. As she delves deeper into the simulation's secrets, she begins to question the nature of her own sanity and the true cost of technological immersion. The film follows Elara as she faces increasingly disturbing revelations that challenge her perception of reality, culminating in a climactic confrontation that forces her to confront the dark side of virtual existence.",
+      "scene_type": "action",
+      "mood": "dramatic",
+      "characters": [],
+      "dialogue": [],
+      "duration": 10.0,
+      "image_prompt": "Cinematic still of Movie screenplay scene. Plot: Detective Elara Voss navigates a neon-lit, glitch-ridden virtual world where her latest case involves unearthing the truth about a mysterious corporation. As she delves deeper into the simulation's secrets, she begins to question the nature of her own sanity and the true cost of technological immersion. The film follows Elara as she faces increasingly disturbing revelations that challenge her perception of reality, culminating in a climactic confrontation that forces her to confront the dark side of virtual existence.",
+      "video_prompt": "Cinematic still of Movie screenplay scene. Plot: Detective Elara Voss navigates a neon-lit, glitch-ridden virtual world where her latest case involves unearthing the truth about a mysterious corporation. As she delves deeper into the simulation's secrets, she begins to question the nature of her own sanity and the true cost of technological immersion. The film follows Elara as she faces increasingly disturbing revelations that challenge her perception of reality, culminating in a climactic confrontation that forces her to confront the dark side of virtual existence., cinematic camera movement, slow motion video"
+    }
+  ],
+  "duration": 3,
+  "music_style": "",
+  "voiceover_script": "",
+  "created_at": "2026-06-12T04:07:44.393824"
+}
