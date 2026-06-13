@@ -1,0 +1,322 @@
+{
+  "title": "Neon Dreams",
+  "logline": "In the depths of space, a lone astronaut uncovers a terrifying conspiracy that manipulates human dreams, forcing them to live in perpetual fear.",
+  "synopsis": "Dr. Elara Myles, a brilliant but haunted neuroscientist, is sent on a routine maintenance mission to an abandoned research station orbiting Saturn's moon Titan. As she delves into the station\u2019s archives, eerie whispers of a dark experiment begin to haunt her. The station appears more alive than ever, its walls pulsating with strange light and the faint murmur of voices. Dr. Myles discovers that a powerful corporation is controlling the dreams of billions, using the research from this very station to maintain a global state of constant fear and obedience. As she races against time to uncover the truth and prevent a nightmare come true for humanity, she must confront her own inner demons and question what is real and what is implanted. 'Neon Dreams' combines psychological drama with action-packed suspense, set in a neon-drenched noir universe that pushes the boundaries of human perception.",
+  "genre": [
+    "Science Fiction",
+    "Psychological Drama"
+  ],
+  "characters": [
+    {
+      "name": "Dr. Elara Myles",
+      "description": "A brilliant but haunted neuroscientist in her late 30s, driven by a desire to uncover the truth and save humanity from a nightmare. Elara's past is shrouded in mystery, leaving her vulnerable yet determined in her mission.",
+      "role": "Protagonist"
+    },
+    {
+      "name": "Major Marcus Hart",
+      "description": "The station\u2019s former commander, now revealed to be the mastermind behind the dream manipulation experiment. Marcus is a charismatic yet manipulative figure, using his position of power and influence to maintain control over humanity.",
+      "role": "Antagonist"
+    },
+    {
+      "name": "Dr. Victor Chen",
+      "description": "A former station engineer who becomes Elara's ally and confidant. Dr. Chen is haunted by the loss of loved ones in the experiment and shares Elara\u2019s resolve to expose the truth.",
+      "role": "Supporting"
+    }
+  ],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "location": "Abandoned research station, interior",
+      "description": "The station is dark and eerie with flickering neon lights casting shadows.",
+      "scene_type": "establishing",
+      "mood": "dramatic",
+      "characters": [
+        "Dr. Elara Myles"
+      ],
+      "dialogue": [],
+      "duration": 60.0,
+      "image_prompt": "Cinematic still of The station is dark and eerie with flickering neon lights casting shadows.",
+      "video_prompt": "Cinematic still of The station is dark and eerie with flickering neon lights casting shadows., cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 2,
+      "location": "Abandoned research station, interior",
+      "description": "Elara explores the station's archives, looking through old files and data.",
+      "scene_type": "action",
+      "mood": "mysterious",
+      "characters": [
+        "Dr. Elara Myles"
+      ],
+      "dialogue": [],
+      "duration": 60.0,
+      "image_prompt": "Cinematic still of Elara explores the station's archives, looking through old files and data.",
+      "video_prompt": "Cinematic still of Elara explores the station's archives, looking through old files and data., cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 3,
+      "location": "Abandoned research station, interior",
+      "description": "Elara finds a strange symbol etched on the wall, feeling an eerie sensation.",
+      "scene_type": "dialogue",
+      "mood": "tense",
+      "characters": [
+        "Dr. Elara Myles"
+      ],
+      "dialogue": [],
+      "duration": 60.0,
+      "image_prompt": "Cinematic still of Elara finds a strange symbol etched on the wall, feeling an eerie sensation.",
+      "video_prompt": "Cinematic still of Elara finds a strange symbol etched on the wall, feeling an eerie sensation., cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 4,
+      "location": "Abandoned research station, interior",
+      "description": "The station walls begin to pulsate, and a faint voice whispers in Elara\u2019s mind.",
+      "scene_type": "action",
+      "mood": "dramatic",
+      "characters": [
+        "Dr. Elara Myles"
+      ],
+      "dialogue": [],
+      "duration": 60.0,
+      "image_prompt": "Cinematic still of The station walls begin to pulsate, and a faint voice whispers in Elara\u2019s mind.",
+      "video_prompt": "Cinematic still of The station walls begin to pulsate, and a faint voice whispers in Elara\u2019s mind., cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 5,
+      "location": "Abandoned research station, interior",
+      "description": "Elara discovers a hidden room with a control panel for manipulating dreams.",
+      "scene_type": "action",
+      "mood": "epic",
+      "characters": [
+        "Dr. Elara Myles"
+      ],
+      "dialogue": [],
+      "duration": 60.0,
+      "image_prompt": "Cinematic still of Elara discovers a hidden room with a control panel for manipulating dreams.",
+      "video_prompt": "Cinematic still of Elara discovers a hidden room with a control panel for manipulating dreams., cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 6,
+      "location": "Abandoned research station, interior",
+      "description": "Elara is confronted by Major Marcus Hart, who reveals his role in the dream manipulation experiment.",
+      "scene_type": "dialogue",
+      "mood": "dramatic",
+      "characters": [
+        "Dr. Elara Myles",
+        "Major Marcus Hart"
+      ],
+      "dialogue": [],
+      "duration": 60.0,
+      "image_prompt": "Cinematic still of Elara is confronted by Major Marcus Hart, who reveals his role in the dream manipulation experiment.",
+      "video_prompt": "Cinematic still of Elara is confronted by Major Marcus Hart, who reveals his role in the dream manipulation experiment., cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 7,
+      "location": "Abandoned research station, interior",
+      "description": "Marcus tries to manipulate Elara's dream, causing her to feel fear and obedience.",
+      "scene_type": "action",
+      "mood": "tense",
+      "characters": [
+        "Dr. Elara Myles",
+        "Major Marcus Hart"
+      ],
+      "dialogue": [],
+      "duration": 60.0,
+      "image_prompt": "Cinematic still of Marcus tries to manipulate Elara's dream, causing her to feel fear and obedience.",
+      "video_prompt": "Cinematic still of Marcus tries to manipulate Elara's dream, causing her to feel fear and obedience., cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 8,
+      "location": "Abandoned research station, interior",
+      "description": "Elara resists Marcus's manipulation, drawing on her own inner strength.",
+      "scene_type": "dialogue",
+      "mood": "dramatic",
+      "characters": [
+        "Dr. Elara Myles",
+        "Major Marcus Hart"
+      ],
+      "dialogue": [],
+      "duration": 60.0,
+      "image_prompt": "Cinematic still of Elara resists Marcus's manipulation, drawing on her own inner strength.",
+      "video_prompt": "Cinematic still of Elara resists Marcus's manipulation, drawing on her own inner strength., cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 9,
+      "location": "Abandoned research station, interior",
+      "description": "Elara discovers Dr. Victor Chen in the station's archives, who becomes her ally.",
+      "scene_type": "dialogue",
+      "mood": "epic",
+      "characters": [
+        "Dr. Elara Myles",
+        "Dr. Victor Chen"
+      ],
+      "dialogue": [],
+      "duration": 60.0,
+      "image_prompt": "Cinematic still of Elara discovers Dr. Victor Chen in the station's archives, who becomes her ally.",
+      "video_prompt": "Cinematic still of Elara discovers Dr. Victor Chen in the station's archives, who becomes her ally., cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 10,
+      "location": "Abandoned research station, interior",
+      "description": "The station walls continue to pulse, and Elara feels a growing sense of urgency.",
+      "scene_type": "action",
+      "mood": "tense",
+      "characters": [
+        "Dr. Elara Myles",
+        "Dr. Victor Chen"
+      ],
+      "dialogue": [],
+      "duration": 60.0,
+      "image_prompt": "Cinematic still of The station walls continue to pulse, and Elara feels a growing sense of urgency.",
+      "video_prompt": "Cinematic still of The station walls continue to pulse, and Elara feels a growing sense of urgency., cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 11,
+      "location": "Abandoned research station, interior",
+      "description": "Elara and Dr. Chen infiltrate Marcus's office to find evidence of the dream manipulation.",
+      "scene_type": "action",
+      "mood": "epic",
+      "characters": [
+        "Dr. Elara Myles",
+        "Dr. Victor Chen"
+      ],
+      "dialogue": [],
+      "duration": 60.0,
+      "image_prompt": "Cinematic still of Elara and Dr. Chen infiltrate Marcus's office to find evidence of the dream manipulation.",
+      "video_prompt": "Cinematic still of Elara and Dr. Chen infiltrate Marcus's office to find evidence of the dream manipulation., cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 12,
+      "location": "Abandoned research station, interior",
+      "description": "Marcus traps Elara and Dr. Chen in a room with no escape.",
+      "scene_type": "dialogue",
+      "mood": "dramatic",
+      "characters": [
+        "Dr. Elara Myles",
+        "Major Marcus Hart"
+      ],
+      "dialogue": [],
+      "duration": 60.0,
+      "image_prompt": "Cinematic still of Marcus traps Elara and Dr. Chen in a room with no escape.",
+      "video_prompt": "Cinematic still of Marcus traps Elara and Dr. Chen in a room with no escape., cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 13,
+      "location": "Abandoned research station, interior",
+      "description": "Elara and Dr. Chen devise a plan to escape from Marcus's trap.",
+      "scene_type": "dialogue",
+      "mood": "epic",
+      "characters": [
+        "Dr. Elara Myles",
+        "Dr. Victor Chen"
+      ],
+      "dialogue": [],
+      "duration": 60.0,
+      "image_prompt": "Cinematic still of Elara and Dr. Chen devise a plan to escape from Marcus's trap.",
+      "video_prompt": "Cinematic still of Elara and Dr. Chen devise a plan to escape from Marcus's trap., cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 14,
+      "location": "Abandoned research station, interior",
+      "description": "Elara and Dr. Chen work together to sabotage Marcus's control system.",
+      "scene_type": "action",
+      "mood": "tense",
+      "characters": [
+        "Dr. Elara Myles",
+        "Dr. Victor Chen"
+      ],
+      "dialogue": [],
+      "duration": 60.0,
+      "image_prompt": "Cinematic still of Elara and Dr. Chen work together to sabotage Marcus's control system.",
+      "video_prompt": "Cinematic still of Elara and Dr. Chen work together to sabotage Marcus's control system., cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 15,
+      "location": "Abandoned research station, interior",
+      "description": "Marcus discovers the sabotage and unleashes a massive dream manipulation on Elara and Dr. Chen.",
+      "scene_type": "action",
+      "mood": "dramatic",
+      "characters": [
+        "Dr. Elara Myles",
+        "Major Marcus Hart"
+      ],
+      "dialogue": [],
+      "duration": 60.0,
+      "image_prompt": "Cinematic still of Marcus discovers the sabotage and unleashes a massive dream manipulation on Elara and Dr. Chen.",
+      "video_prompt": "Cinematic still of Marcus discovers the sabotage and unleashes a massive dream manipulation on Elara and Dr. Chen., cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 16,
+      "location": "Abandoned research station, interior",
+      "description": "Elara and Dr. Chen fight back against Marcus's manipulation, using their own knowledge to overcome him.",
+      "scene_type": "action",
+      "mood": "tense",
+      "characters": [
+        "Dr. Elara Myles",
+        "Major Marcus Hart"
+      ],
+      "dialogue": [],
+      "duration": 60.0,
+      "image_prompt": "Cinematic still of Elara and Dr. Chen fight back against Marcus's manipulation, using their own knowledge to overcome him.",
+      "video_prompt": "Cinematic still of Elara and Dr. Chen fight back against Marcus's manipulation, using their own knowledge to overcome him., cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 17,
+      "location": "Abandoned research station, interior",
+      "description": "Marcus is defeated, and the station's control system shuts down.",
+      "scene_type": "dialogue",
+      "mood": "dramatic",
+      "characters": [
+        "Dr. Elara Myles"
+      ],
+      "dialogue": [],
+      "duration": 60.0,
+      "image_prompt": "Cinematic still of Marcus is defeated, and the station's control system shuts down.",
+      "video_prompt": "Cinematic still of Marcus is defeated, and the station's control system shuts down., cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 18,
+      "location": "Abandoned research station, interior",
+      "description": "Elara and Dr. Chen exit the station, looking out at the vast universe beyond.",
+      "scene_type": "dialogue",
+      "mood": "epic",
+      "characters": [
+        "Dr. Elara Myles",
+        "Dr. Victor Chen"
+      ],
+      "dialogue": [],
+      "duration": 60.0,
+      "image_prompt": "Cinematic still of Elara and Dr. Chen exit the station, looking out at the vast universe beyond.",
+      "video_prompt": "Cinematic still of Elara and Dr. Chen exit the station, looking out at the vast universe beyond., cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 19,
+      "location": "Abandoned research station, interior",
+      "description": "Elara reflects on her journey and the lessons she's learned.",
+      "scene_type": "dialogue",
+      "mood": "dramatic",
+      "characters": [
+        "Dr. Elara Myles"
+      ],
+      "dialogue": [],
+      "duration": 60.0,
+      "image_prompt": "Cinematic still of Elara reflects on her journey and the lessons she's learned.",
+      "video_prompt": "Cinematic still of Elara reflects on her journey and the lessons she's learned., cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 20,
+      "location": "Abandoned research station, interior",
+      "description": "Elara and Dr. Chen leave the station together, ready for their next challenge.",
+      "scene_type": "resolution",
+      "mood": "epic",
+      "characters": [
+        "Dr. Elara Myles",
+        "Dr. Victor Chen"
+      ],
+      "dialogue": [],
+      "duration": 60.0,
+      "image_prompt": "Cinematic still of Elara and Dr. Chen leave the station together, ready for their next challenge.",
+      "video_prompt": "Cinematic still of Elara and Dr. Chen leave the station together, ready for their next challenge., cinematic camera movement, slow motion video"
+    }
+  ],
+  "total_duration": 1200.0
+}

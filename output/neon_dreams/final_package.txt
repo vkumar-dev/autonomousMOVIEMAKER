@@ -1,0 +1,6 @@
+AUTONOMOUS MOVIE PACKAGE: Neon Dreams
+========================================
+PART 1: TRAILER (6s)
+PART 2: MOVIE (20.0m)
+========================================
+Generated at: 2026-06-13T03:51:39.601314

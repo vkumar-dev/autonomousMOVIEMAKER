@@ -1,0 +1,37 @@
+{
+  "title": "Neon Dreams - Trailer",
+  "scenes": [
+    {
+      "scene_number": 2,
+      "location": "Abandoned research station, interior",
+      "description": "Elara explores the station's archives, looking through old files and data.",
+      "scene_type": "action",
+      "mood": "mysterious",
+      "characters": [
+        "Dr. Elara Myles"
+      ],
+      "dialogue": [],
+      "duration": 60.0,
+      "image_prompt": "Cinematic still of Elara explores the station's archives, looking through old files and data.",
+      "video_prompt": "Cinematic still of Elara explores the station's archives, looking through old files and data., cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 4,
+      "location": "Abandoned research station, interior",
+      "description": "The station walls begin to pulsate, and a faint voice whispers in Elara\u2019s mind.",
+      "scene_type": "action",
+      "mood": "dramatic",
+      "characters": [
+        "Dr. Elara Myles"
+      ],
+      "dialogue": [],
+      "duration": 60.0,
+      "image_prompt": "Cinematic still of The station walls begin to pulsate, and a faint voice whispers in Elara\u2019s mind.",
+      "video_prompt": "Cinematic still of The station walls begin to pulsate, and a faint voice whispers in Elara\u2019s mind., cinematic camera movement, slow motion video"
+    }
+  ],
+  "duration": 6,
+  "music_style": "",
+  "voiceover_script": "",
+  "created_at": "2026-06-13T03:51:23.566994"
+}
