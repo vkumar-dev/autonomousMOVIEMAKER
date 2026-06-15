@@ -1,0 +1,264 @@
+{
+  "title": "Frozen Abyss",
+  "logline": "In a dystopian underwater city beneath frozen ice, a neo-noir detective must navigate the treacherous waters of nature reclaiming their world while uncovering a conspiracy that threatens all.",
+  "synopsis": "Set in a submerged metropolis under an icy overworld, Detective Kira Novak navigates the neon-lit streets and subterranean canyons of Aquapolis. As natural elements begin to reclaim the city, Kira follows a trail of cryptic messages left by a rival detective who vanished years ago, leading her into a labyrinthine conspiracy involving powerful factions vying for control of the underwater world's resources. Alongside an enigmatic tech-savvy mermaid named Elara, Kira races against time to unravel the mystery and survive the encroaching darkness before it's too late.",
+  "genre": [
+    "Neo-Noir",
+    "Dystopian"
+  ],
+  "characters": [
+    {
+      "name": "Kira Novak",
+      "description": "A seasoned detective with a haunted past, Kira is driven to uncover the truth behind the conspiracy that threatens Aquapolis. Her resilience and unwavering determination make her the city's last hope.",
+      "role": "Protagonist"
+    },
+    {
+      "name": "Elara",
+      "description": "A mermaid with a mysterious past, Elara assists Kira in her investigation while uncovering her own secrets. Her intelligence and combat skills prove invaluable as they navigate the underwater city's dangers.",
+      "role": "Supporting Character"
+    }
+  ],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "location": "Underwater City Streets",
+      "description": "",
+      "scene_type": "establishing",
+      "mood": "dramatic",
+      "characters": [],
+      "dialogue": [],
+      "duration": 5.0,
+      "image_prompt": "Cinematic still of ",
+      "video_prompt": "Cinematic still of , cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 2,
+      "location": "Aquapolis Subterranean Canyons",
+      "description": "",
+      "scene_type": "establishing",
+      "mood": "tense",
+      "characters": [],
+      "dialogue": [],
+      "duration": 5.0,
+      "image_prompt": "Cinematic still of ",
+      "video_prompt": "Cinematic still of , cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 3,
+      "location": "Aquapolis Subterranean Canyons",
+      "description": "",
+      "scene_type": "action",
+      "mood": "mysterious",
+      "characters": [],
+      "dialogue": [],
+      "duration": 5.0,
+      "image_prompt": "Cinematic still of ",
+      "video_prompt": "Cinematic still of , cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 4,
+      "location": "Aquapolis Subterranean Canyons",
+      "description": "",
+      "scene_type": "dialogue",
+      "mood": "dramatic",
+      "characters": [],
+      "dialogue": [],
+      "duration": 5.0,
+      "image_prompt": "Cinematic still of ",
+      "video_prompt": "Cinematic still of , cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 5,
+      "location": "Aquapolis Subterranean Canyons",
+      "description": "",
+      "scene_type": "action",
+      "mood": "tense",
+      "characters": [],
+      "dialogue": [],
+      "duration": 5.0,
+      "image_prompt": "Cinematic still of ",
+      "video_prompt": "Cinematic still of , cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 6,
+      "location": "Aquapolis Subterranean Canyons",
+      "description": "",
+      "scene_type": "climax",
+      "mood": "dramatic",
+      "characters": [],
+      "dialogue": [],
+      "duration": 5.0,
+      "image_prompt": "Cinematic still of ",
+      "video_prompt": "Cinematic still of , cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 7,
+      "location": "Aquapolis Subterranean Canyons",
+      "description": "",
+      "scene_type": "climax",
+      "mood": "tense",
+      "characters": [],
+      "dialogue": [],
+      "duration": 5.0,
+      "image_prompt": "Cinematic still of ",
+      "video_prompt": "Cinematic still of , cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 8,
+      "location": "Aquapolis Subterranean Canyons",
+      "description": "",
+      "scene_type": "climax",
+      "mood": "dramatic",
+      "characters": [],
+      "dialogue": [],
+      "duration": 5.0,
+      "image_prompt": "Cinematic still of ",
+      "video_prompt": "Cinematic still of , cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 9,
+      "location": "Aquapolis Subterranean Canyons",
+      "description": "",
+      "scene_type": "climax",
+      "mood": "tense",
+      "characters": [],
+      "dialogue": [],
+      "duration": 5.0,
+      "image_prompt": "Cinematic still of ",
+      "video_prompt": "Cinematic still of , cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 10,
+      "location": "Aquapolis Subterranean Canyons",
+      "description": "",
+      "scene_type": "establishing",
+      "mood": "mysterious",
+      "characters": [],
+      "dialogue": [],
+      "duration": 5.0,
+      "image_prompt": "Cinematic still of ",
+      "video_prompt": "Cinematic still of , cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 11,
+      "location": "Aquapolis Subterranean Canyons",
+      "description": "",
+      "scene_type": "dialogue",
+      "mood": "dramatic",
+      "characters": [],
+      "dialogue": [],
+      "duration": 5.0,
+      "image_prompt": "Cinematic still of ",
+      "video_prompt": "Cinematic still of , cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 12,
+      "location": "Aquapolis Subterranean Canyons",
+      "description": "",
+      "scene_type": "climax",
+      "mood": "dramatic",
+      "characters": [],
+      "dialogue": [],
+      "duration": 5.0,
+      "image_prompt": "Cinematic still of ",
+      "video_prompt": "Cinematic still of , cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 13,
+      "location": "Aquapolis Subterranean Canyons",
+      "description": "",
+      "scene_type": "climax",
+      "mood": "tense",
+      "characters": [],
+      "dialogue": [],
+      "duration": 5.0,
+      "image_prompt": "Cinematic still of ",
+      "video_prompt": "Cinematic still of , cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 14,
+      "location": "Aquapolis Subterranean Canyons",
+      "description": "",
+      "scene_type": "climax",
+      "mood": "tense",
+      "characters": [],
+      "dialogue": [],
+      "duration": 5.0,
+      "image_prompt": "Cinematic still of ",
+      "video_prompt": "Cinematic still of , cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 15,
+      "location": "Aquapolis Subterranean Canyons",
+      "description": "",
+      "scene_type": "climax",
+      "mood": "dramatic",
+      "characters": [],
+      "dialogue": [],
+      "duration": 5.0,
+      "image_prompt": "Cinematic still of ",
+      "video_prompt": "Cinematic still of , cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 16,
+      "location": "Aquapolis Subterranean Canyons",
+      "description": "",
+      "scene_type": "resolution",
+      "mood": "dramatic",
+      "characters": [],
+      "dialogue": [],
+      "duration": 5.0,
+      "image_prompt": "Cinematic still of ",
+      "video_prompt": "Cinematic still of , cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 17,
+      "location": "Aquapolis Subterranean Canyons",
+      "description": "",
+      "scene_type": "establishing",
+      "mood": "epic",
+      "characters": [],
+      "dialogue": [],
+      "duration": 5.0,
+      "image_prompt": "Cinematic still of ",
+      "video_prompt": "Cinematic still of , cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 18,
+      "location": "Aquapolis Subterranean Canyons",
+      "description": "",
+      "scene_type": "establishing",
+      "mood": "happy",
+      "characters": [],
+      "dialogue": [],
+      "duration": 5.0,
+      "image_prompt": "Cinematic still of ",
+      "video_prompt": "Cinematic still of , cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 19,
+      "location": "Aquapolis Subterranean Canyons",
+      "description": "",
+      "scene_type": "resolution",
+      "mood": "happy",
+      "characters": [],
+      "dialogue": [],
+      "duration": 5.0,
+      "image_prompt": "Cinematic still of ",
+      "video_prompt": "Cinematic still of , cinematic camera movement, slow motion video"
+    },
+    {
+      "scene_number": 20,
+      "location": "Aquapolis Subterranean Canyons",
+      "description": "",
+      "scene_type": "resolution",
+      "mood": "happy",
+      "characters": [],
+      "dialogue": [],
+      "duration": 5.0,
+      "image_prompt": "Cinematic still of ",
+      "video_prompt": "Cinematic still of , cinematic camera movement, slow motion video"
+    }
+  ],
+  "total_duration": 100.0
+}
