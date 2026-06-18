@@ -1,0 +1,36 @@
+{
+  "title": "Stations of Solitude",
+  "logline": "In the desolate void of deep space, one man's sanity slowly crumbles as he grapples with isolation in an abandoned research station.",
+  "synopsis": "The story follows Dr. Elara Myles, a brilliant astrophysicist, who is sent to investigate an anomaly on an abandoned research station orbiting the distant red giant Solis V. As she delves deeper into the facility's secrets, the isolation and eerie silence begin to take their toll on her mental state. Slowly tracking shots through the dimly lit corridors of the deserted station reveal her deteriorating condition. Elara's once sharp mind becomes clouded by paranoia and hallucinations, as she begins to uncover a sinister conspiracy that threatens not just her survival but the future of humanity.",
+  "genre": [
+    "Science Fiction",
+    "Psychological Thriller"
+  ],
+  "characters": [
+    {
+      "name": "Dr. Elara Myles",
+      "description": "A brilliant but fragile mind, Dr. Myles is driven by a deep-seated curiosity and the desire to uncover the truth. Her isolation in the research station begins to unravel her sanity, leading her down a dark path of paranoia and delusion.",
+      "role": "Protagonist"
+    },
+    {
+      "name": "Commander Jackson",
+      "description": "The shadowy figure behind the station's abandonment, Commander Jackson is revealed as a ruthless scientist who sees the station as a means to an end. His obsession with the anomaly and his thirst for power lead him to create a network of sleeper agents within the research facility.",
+      "role": "Antagonist"
+    }
+  ],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "location": "INT. SCENE - DAY",
+      "description": "Movie screenplay scene. Plot: The story follows Dr. Elara Myles, a brilliant astrophysicist, who is sent to investigate an anomaly on an abandoned research station orbiting the distant red giant Solis V. As she delves deeper into the facility's secrets, the isolation and eerie silence begin to take their toll on her mental state. Slowly tracking shots through the dimly lit corridors of the deserted station reveal her deteriorating condition. Elara's once sharp mind becomes clouded by paranoia and hallucinations, as she begins to uncover a sinister conspiracy that threatens not just her survival but the future of humanity.",
+      "scene_type": "action",
+      "mood": "dramatic",
+      "characters": [],
+      "dialogue": [],
+      "duration": 10.0,
+      "image_prompt": "Cinematic still of Movie screenplay scene. Plot: The story follows Dr. Elara Myles, a brilliant astrophysicist, who is sent to investigate an anomaly on an abandoned research station orbiting the distant red giant Solis V. As she delves deeper into the facility's secrets, the isolation and eerie silence begin to take their toll on her mental state. Slowly tracking shots through the dimly lit corridors of the deserted station reveal her deteriorating condition. Elara's once sharp mind becomes clouded by paranoia and hallucinations, as she begins to uncover a sinister conspiracy that threatens not just her survival but the future of humanity.",
+      "video_prompt": "Cinematic still of Movie screenplay scene. Plot: The story follows Dr. Elara Myles, a brilliant astrophysicist, who is sent to investigate an anomaly on an abandoned research station orbiting the distant red giant Solis V. As she delves deeper into the facility's secrets, the isolation and eerie silence begin to take their toll on her mental state. Slowly tracking shots through the dimly lit corridors of the deserted station reveal her deteriorating condition. Elara's once sharp mind becomes clouded by paranoia and hallucinations, as she begins to uncover a sinister conspiracy that threatens not just her survival but the future of humanity., cinematic camera movement, slow motion video"
+    }
+  ],
+  "total_duration": 10.0
+}

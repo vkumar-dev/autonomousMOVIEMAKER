@@ -1,0 +1,21 @@
+{
+  "title": "Stations of Solitude - Trailer",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "location": "INT. SCENE - DAY",
+      "description": "Movie screenplay scene. Plot: The story follows Dr. Elara Myles, a brilliant astrophysicist, who is sent to investigate an anomaly on an abandoned research station orbiting the distant red giant Solis V. As she delves deeper into the facility's secrets, the isolation and eerie silence begin to take their toll on her mental state. Slowly tracking shots through the dimly lit corridors of the deserted station reveal her deteriorating condition. Elara's once sharp mind becomes clouded by paranoia and hallucinations, as she begins to uncover a sinister conspiracy that threatens not just her survival but the future of humanity.",
+      "scene_type": "action",
+      "mood": "dramatic",
+      "characters": [],
+      "dialogue": [],
+      "duration": 10.0,
+      "image_prompt": "Cinematic still of Movie screenplay scene. Plot: The story follows Dr. Elara Myles, a brilliant astrophysicist, who is sent to investigate an anomaly on an abandoned research station orbiting the distant red giant Solis V. As she delves deeper into the facility's secrets, the isolation and eerie silence begin to take their toll on her mental state. Slowly tracking shots through the dimly lit corridors of the deserted station reveal her deteriorating condition. Elara's once sharp mind becomes clouded by paranoia and hallucinations, as she begins to uncover a sinister conspiracy that threatens not just her survival but the future of humanity.",
+      "video_prompt": "Cinematic still of Movie screenplay scene. Plot: The story follows Dr. Elara Myles, a brilliant astrophysicist, who is sent to investigate an anomaly on an abandoned research station orbiting the distant red giant Solis V. As she delves deeper into the facility's secrets, the isolation and eerie silence begin to take their toll on her mental state. Slowly tracking shots through the dimly lit corridors of the deserted station reveal her deteriorating condition. Elara's once sharp mind becomes clouded by paranoia and hallucinations, as she begins to uncover a sinister conspiracy that threatens not just her survival but the future of humanity., cinematic camera movement, slow motion video"
+    }
+  ],
+  "duration": 3,
+  "music_style": "",
+  "voiceover_script": "",
+  "created_at": "2026-06-18T04:06:35.003612"
+}
