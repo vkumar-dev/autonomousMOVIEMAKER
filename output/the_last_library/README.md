@@ -1,29 +1,29 @@
 # 🎬 The Last Library
 
-> **Logline:** In a desolate post-apocalyptic world, the remnants of humanity seek refuge in an ancient library controlled by a mysterious corporation that manipulates dreams.
+> **Logline:** As the world teeters on the brink of collapse, a lone librarian must race against time to save the past within a forgotten library at the edge of the world.
 
 ## 📊 Movie Stats
-- **Genre:** Action, Drama
+- **Genre:** Action, Adventure, Science Fiction
 - **Total Runtime:** 0.2 minutes
 - **Trailer Runtime:** 3 seconds
 - **Scene Count:** 1
 
 ## 📝 Synopsis
-In a world ravaged by war and famine, only a handful of survivors remain. One day, they stumble upon a decrepit library at the edge of the world, its towering shelves filled with forgotten knowledge. The library is ruled over by a shadowy corporation that uses advanced technology to control people's dreams, turning their minds into tools for manipulation. As the survivors explore the library, they discover a shocking truth about the corporation's origins and its role in shaping society. With time running out and danger lurking around every corner, the survivors must fight to uncover the secrets of the past, resist the corporation's grip on their minds, and find a way to reclaim their freedom before it's too late.
+In the desolate outskirts of what was once a bustling city, lies a hidden library that holds the secrets of the past. The story follows Maya, a resourceful and determined librarian who discovers an ancient book predicting the impending doom of the world. With only days left to save humanity, Maya races against time to decipher the cryptic messages within the book, uncovering forgotten technologies and knowledge that could alter the course of history. However, as she delves deeper into the library's mysteries, Maya realizes that someone else is also after its secrets, leading to a thrilling race against both time and an unseen enemy.
 
 ## 🎥 Trailer Scene Breakdown
-1. **INT. SCENE - DAY** (10.0s) - *Movie screenplay scene. Plot: In a world ravaged by war and famine, only a handful of survivors rema...*
+1. **INT. SCENE - DAY** (10.0s) - *Movie screenplay scene. Plot: In the desolate outskirts of what was once a bustling city, lies a hid...*
 
 ## 🎭 Characters
-- **Ella** (Protagonist): A resourceful and determined survivor with a keen intellect. Ella is driven by her desire to uncover the truth about the corporation's control over dreams and fight for her people's freedom.
-- **Max** (Supporting): A tough and loyal ally of Ella, Max provides physical support and combat skills in their quest to survive and uncover the conspiracy.
-- **Dr. Hartman** (Antagonist): The leader of the corporation that controls people's dreams. Dr. Hartman is a brilliant scientist who sees his work as a means to save humanity, unaware of the true cost of his manipulations.
+- **Maya** (Protagonist): A young and resourceful librarian who discovers an ancient book predicting the impending doom of the world. She must race against time to decipher the cryptic messages within the book, uncovering forgotten technologies and knowledge that could alter the course of history.
+- **Dr. Elara** (Supporting): A brilliant scientist who has been brought in by Maya to help her decipher the ancient book's messages. She is skeptical at first but becomes increasingly intrigued as she uncovers hidden truths within the text.
+- **Vexus** (Antagonist): An unseen enemy who seeks the secrets of the library for their own sinister purposes. They will stop at nothing to obtain its knowledge and prevent it from falling into Maya's hands.
 
 ## 🎞️ Full Screenplay
 ### Scene 1: INT. SCENE - DAY
 **Type:** ACTION | **Mood:** DRAMATIC | **Duration:** 10.0s
 
-Movie screenplay scene. Plot: In a world ravaged by war and famine, only a handful of survivors remain. One day, they stumble upon a decrepit library at the edge of the world, its towering shelves filled with forgotten knowledge. The library is ruled over by a shadowy corporation that uses advanced technology to control people's dreams, turning their minds into tools for manipulation. As the survivors explore the library, they discover a shocking truth about the corporation's origins and its role in shaping society. With time running out and danger lurking around every corner, the survivors must fight to uncover the secrets of the past, resist the corporation's grip on their minds, and find a way to reclaim their freedom before it's too late.
+Movie screenplay scene. Plot: In the desolate outskirts of what was once a bustling city, lies a hidden library that holds the secrets of the past. The story follows Maya, a resourceful and determined librarian who discovers an ancient book predicting the impending doom of the world. With only days left to save humanity, Maya races against time to decipher the cryptic messages within the book, uncovering forgotten technologies and knowledge that could alter the course of history. However, as she delves deeper into the library's mysteries, Maya realizes that someone else is also after its secrets, leading to a thrilling race against both time and an unseen enemy.
 
 --- 
 
