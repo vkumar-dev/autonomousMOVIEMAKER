@@ -1,9 +1,9 @@
 name: Autonomous Movie Generation (Ollama)
 
 on:
-  schedule:
-    # Run daily at midnight
-    - cron: '0 0 * * *'
+  # schedule:
+  #   # Run daily at midnight
+  #   - cron: '0 0 * * *'
   workflow_dispatch:
     # Manual trigger for testing
     inputs:

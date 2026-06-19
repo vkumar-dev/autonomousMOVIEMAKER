@@ -95,6 +95,13 @@ async def main():
         shutil.move(movie.video_path, final_mp4)
         print(f"🎞️ Movie file moved to {final_mp4}")
 
+    # Move trailer file to project dir
+    if trailer.video_path and trailer.video_path.exists():
+        final_trailer_mp4 = project_dir / f"{slug}_trailer.mp4"
+        import shutil
+        shutil.move(trailer.video_path, final_trailer_mp4)
+        print(f"🎬 Trailer file moved to {final_trailer_mp4}")
+
     print(f"✅ Saved project files to {project_dir}")
     
     # Create a nice markdown screenplay presentation

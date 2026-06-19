@@ -368,10 +368,17 @@ Output as JSON with scene_number and image_prompt fields."""
         
         self._update_progress("trailer", 0.9, "Compiling trailer...", "Finalizing trailer")
         
+        # Compile trailer video
+        from ..utils.video import concatenate_videos
+        final_trailer_path = self.config.pipeline.output_dir / f"{script.title.lower().replace(' ', '_')}_trailer.mp4"
+        if trailer_videos:
+            await concatenate_videos(trailer_videos, final_trailer_path)
+        
         # Create trailer object
         trailer = Trailer(
             title=f"{script.title} - Trailer",
             scenes=trailer_scenes,
+            video_path=final_trailer_path if trailer_videos else None,
             duration=len(trailer_scenes) * 3,  # Approximate
         )
         

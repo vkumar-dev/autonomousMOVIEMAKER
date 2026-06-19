@@ -23,15 +23,20 @@ def update_gallery():
                     
                 # Look for mp4 files in the output directory
                 video_file = None
-                potential_video = movie_path / f"{data['title'].lower().replace(' ', '_')}_full.mp4"
+                potential_video = movie_path / f"{movie_path.name}_full.mp4"
                 
                 if potential_video.exists():
                     video_file = f"output/{movie_path.name}/{potential_video.name}"
                 else:
-                    # Look for any mp4 in the folder
-                    mp4s = list(movie_path.glob("*.mp4"))
-                    if mp4s:
-                        video_file = f"output/{movie_path.name}/{mp4s[0].name}"
+                    # Look for any mp4 ending with _full.mp4 in the folder
+                    full_mp4s = list(movie_path.glob("*_full.mp4"))
+                    if full_mp4s:
+                        video_file = f"output/{movie_path.name}/{full_mp4s[0].name}"
+                    else:
+                        # Fallback to any mp4
+                        mp4s = list(movie_path.glob("*.mp4"))
+                        if mp4s:
+                            video_file = f"output/{movie_path.name}/{mp4s[0].name}"
                 
                 movies.append({
                     "title": data.get("title", "Untitled"),

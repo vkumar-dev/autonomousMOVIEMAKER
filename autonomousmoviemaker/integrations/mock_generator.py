@@ -91,12 +91,43 @@ class MockImageGenerator(BaseImageGenerator):
         temp_dir.mkdir(exist_ok=True)
         
         import hashlib
-        filename = f"image_{hashlib.md5(prompt.encode()).hexdigest()[:8]}.txt"
+        filename = f"image_{hashlib.md5(prompt.encode()).hexdigest()[:8]}.png"
         image_path = temp_dir / filename
         
-        # Write mock image data (in real implementation, this would be actual image)
-        with open(image_path, "w") as f:
-            f.write(f"MOCK IMAGE\nPrompt: {prompt}\nModel: {self.model_name}\n")
+        try:
+            from PIL import Image, ImageDraw
+            
+            # Generate a consistent color based on the prompt
+            h = int(hashlib.md5(prompt.encode()).hexdigest(), 16)
+            r = ((h & 0xff0000) >> 16) % 128 + 64
+            g = ((h & 0x00ff00) >> 8) % 128 + 64
+            b = (h & 0x0000ff) % 128 + 64
+            
+            # Create a 1024x1024 image
+            img = Image.new("RGB", (1024, 1024), color=(r, g, b))
+            draw = ImageDraw.Draw(img)
+            
+            # Draw some stylized text to simulate the image scene
+            text_lines = [
+                "SCENE VISUALIZATION PLACEHOLDER",
+                f"Model: {self.model_name}",
+                f"Prompt: {prompt[:80]}"
+            ]
+            if len(prompt) > 80:
+                text_lines.append(f"...{prompt[80:160]}")
+            
+            y_offset = 450
+            for line in text_lines:
+                draw.text((100, y_offset), line, fill=(255, 255, 255))
+                y_offset += 30
+                
+            img.save(image_path)
+        except Exception as e:
+            # Fallback to write plain text if PIL isn't available
+            filename_fallback = f"image_{hashlib.md5(prompt.encode()).hexdigest()[:8]}.txt"
+            image_path = temp_dir / filename_fallback
+            with open(image_path, "w") as f:
+                f.write(f"MOCK IMAGE\nPrompt: {prompt}\nModel: {self.model_name}\nError: {e}\n")
         
         return ImageGenerationResult(
             success=True,
@@ -127,12 +158,57 @@ class MockVideoGenerator(BaseVideoGenerator):
         temp_dir.mkdir(exist_ok=True)
         
         import hashlib
-        filename = f"video_{hashlib.md5(prompt.encode()).hexdigest()[:8]}.txt"
+        filename = f"video_{hashlib.md5(prompt.encode()).hexdigest()[:8]}.mp4"
         video_path = temp_dir / filename
         
-        # Write mock video data
-        with open(video_path, "w") as f:
-            f.write(f"MOCK VIDEO\nPrompt: {prompt}\nDuration: {duration}s\nModel: {self.model_name}\n")
+        try:
+            from PIL import Image, ImageDraw
+            
+            # Generate a temporary image first
+            image_filename = f"video_temp_{hashlib.md5(prompt.encode()).hexdigest()[:8]}.png"
+            image_path = temp_dir / image_filename
+            
+            h = int(hashlib.md5(prompt.encode()).hexdigest(), 16)
+            r = ((h & 0xff0000) >> 16) % 128 + 64
+            g = ((h & 0x00ff00) >> 8) % 128 + 64
+            b = (h & 0x0000ff) % 128 + 64
+            
+            # HD Resolution
+            img = Image.new("RGB", (1920, 1080), color=(r, g, b))
+            draw = ImageDraw.Draw(img)
+            
+            text_lines = [
+                "MOCK VIDEO CLIP",
+                f"Model: {self.model_name}",
+                f"Duration: {duration}s",
+                f"Prompt: {prompt[:80]}"
+            ]
+            if len(prompt) > 80:
+                text_lines.append(f"...{prompt[80:160]}")
+                
+            y_offset = 450
+            for line in text_lines:
+                draw.text((100, y_offset), line, fill=(255, 255, 255))
+                y_offset += 35
+                
+            img.save(image_path)
+            
+            # Use utility function to create video from image using ffmpeg
+            from ..utils.video import create_video_from_image
+            await create_video_from_image(image_path, video_path, duration=duration)
+            
+            # Clean up temporary image
+            try:
+                image_path.unlink()
+            except:
+                pass
+                
+        except Exception as e:
+            # Fallback to write plain text if PIL/ffmpeg fails
+            filename_fallback = f"video_{hashlib.md5(prompt.encode()).hexdigest()[:8]}.txt"
+            video_path = temp_dir / filename_fallback
+            with open(video_path, "w") as f:
+                f.write(f"MOCK VIDEO\nPrompt: {prompt}\nDuration: {duration}s\nModel: {self.model_name}\nError: {e}\n")
         
         return VideoGenerationResult(
             success=True,
