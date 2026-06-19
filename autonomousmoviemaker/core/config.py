@@ -53,10 +53,10 @@ class PipelineConfig:
     """Configuration for the movie generation pipeline."""
     output_dir: Path = Path("./output")
     temp_dir: Path = Path("./temp")
-    max_scenes: int = 100
-    max_trailer_scenes: int = 15
-    trailer_duration: int = 90  # seconds (1.5 minutes)
-    movie_duration: int = 1200 # seconds (20 minutes)
+    max_scenes: int = 10
+    max_trailer_scenes: int = 3
+    trailer_duration: int = 15  # seconds
+    movie_duration: int = 120 # seconds (2 minutes)
     enable_audio: bool = True
     enable_subtitles: bool = True
     parallel_generation: bool = True

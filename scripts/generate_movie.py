@@ -51,15 +51,15 @@ async def main():
     output_dir = Path("./output")
     output_dir.mkdir(exist_ok=True)
     
-    # 3. Generate Script (20 minute target)
-    print("\n✍️ Step 3: Writing full movie script (Target: 20 minutes)...")
+    # 3. Generate Script
+    print(f"\n✍️ Step 3: Writing full movie script (Target: {maker.config.pipeline.movie_duration / 60:.1f} minutes)...")
     script = await maker.generate_script(concept["prompt"])
     print(f"   Title: {script.title}")
     print(f"   Total Scenes: {len(script.scenes)}")
     print(f"   Estimated Duration: {script.total_duration / 60:.1f} minutes")
     
-    # 4. Generate Trailer (1-2 minute target)
-    print("\n🎬 Step 4: Creating movie trailer (Target: 1-2 minutes)...")
+    # 4. Generate Trailer
+    print(f"\n🎬 Step 4: Creating movie trailer (Target: {maker.config.pipeline.trailer_duration} seconds)...")
     trailer = await maker.generate_trailer(script)
     print(f"   Trailer Scenes: {len(trailer.scenes)}")
     print(f"   Trailer Duration: {trailer.duration} seconds")
